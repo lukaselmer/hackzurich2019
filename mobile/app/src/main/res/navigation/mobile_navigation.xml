@@ -13,31 +13,19 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="ch.christofbuechi.plantreemobile.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="ch.christofbuechi.plantreemobile.ui.gallery.InfoFragment"
+        android:label="@string/menu_info"
+        tools:layout="@layout/fragment_info" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="ch.christofbuechi.plantreemobile.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="ch.christofbuechi.plantreemobile.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:name="ch.christofbuechi.plantreemobile.ui.slideshow.FindTreehostFragment"
+        android:label="@string/menu_findTreehost"
+        tools:layout="@layout/fragment_find_treehost" />
 
     <fragment
         android:id="@+id/nav_share"
         android:name="ch.christofbuechi.plantreemobile.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="ch.christofbuechi.plantreemobile.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 </navigation>

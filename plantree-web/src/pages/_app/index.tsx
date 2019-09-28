@@ -24,6 +24,7 @@ import { MyTreeLocations } from '../treehost/my-tree-locations';
 import { OfferPlantingLocation } from '../treehost/offer-planting-location';
 import { Treehost } from '../treehost/treehost';
 import { LoadScript } from '@react-google-maps/api';
+import logo from '../../images/logo.svg';
 
 export function App(_props: any) {
   return (
@@ -35,8 +36,7 @@ export function App(_props: any) {
       <ProvideAuth>
         <Router>
           <>
-            <Navbar color="white" spaced={true} logo="https://uploads.divjoy.com/logo.svg" />
-
+            <Navbar color="white" spaced={false} logo={logo} />
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />

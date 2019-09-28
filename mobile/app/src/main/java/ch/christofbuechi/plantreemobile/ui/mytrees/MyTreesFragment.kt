@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.send
+package ch.christofbuechi.plantreemobile.ui.mytrees
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ch.christofbuechi.plantreemobile.R
 
-class SendFragment : Fragment() {
+class MyTreesFragment : Fragment() {
 
-    private lateinit var sendViewModel: SendViewModel
+    private lateinit var toolsViewModel: MyTreesViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        sendViewModel =
-            ViewModelProviders.of(this).get(SendViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_send, container, false)
-        val textView: TextView = root.findViewById(R.id.text_send)
-        sendViewModel.text.observe(this, Observer {
+        toolsViewModel =
+            ViewModelProviders.of(this).get(MyTreesViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_tools, container, false)
+        val textView: TextView = root.findViewById(R.id.text_tools)
+        toolsViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="Mit wem haben wir das Vergnügen ?"
+            android:text="Who's helping?"
             android:textSize="16dip" />
 
         <ImageView

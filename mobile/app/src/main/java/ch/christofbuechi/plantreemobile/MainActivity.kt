@@ -1,19 +1,19 @@
 package ch.christofbuechi.plantreemobile
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import android.view.Menu
-import android.content.Intent
-import android.net.Uri
 
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +45,11 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_info, R.id.nav_findtreehost,
+                R.id.nav_account,
+                R.id.nav_howto,
+                R.id.nav_findtreehost,
+                R.id.nav_upcoming_plantins,
+                R.id.nav_my_trees,
                 R.id.nav_share
             ), drawerLayout
         )

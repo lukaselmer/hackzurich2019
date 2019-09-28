@@ -64,7 +64,8 @@ export class OfferPlantingLocation extends Component<{}, S> {
               <Link to="/treehost">Treehost</Link>
             </BreadcrumbItem>
             <BreadcrumbItem isActive>
-              <a href="#">Offer Planting Location</a>
+              {/* eslint-disable-next-line */}
+              <a>Offer Planting Location</a>
             </BreadcrumbItem>
           </ul>
         </Breadcrumb>

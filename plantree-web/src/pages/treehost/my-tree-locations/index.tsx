@@ -12,7 +12,8 @@ export function MyTreeLocations(_props: unknown) {
             <Link to="/">Home</Link>
           </BreadcrumbItem>
           <BreadcrumbItem isActive>
-            <a href="#">Treehost</a>
+            {/* eslint-disable-next-line */}
+            <a>Treehost</a>
           </BreadcrumbItem>
         </ul>
       </Breadcrumb>

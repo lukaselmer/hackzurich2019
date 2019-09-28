@@ -1,5 +1,8 @@
 package ch.christofbuechi.plantreemobile.ui.treehost;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,10 +33,17 @@ public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.Person
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PersonViewHolder holder, int i) {
-        holder.personName.setText(persons.get(i).name);
-        holder.personAge.setText(persons.get(i).age);
-        holder.personPhoto.setImageResource(persons.get(i).photoId);
+    public void onBindViewHolder(@NonNull PersonViewHolder holder, final int position) {
+        holder.personName.setText(persons.get(position).name);
+        holder.personAge.setText(persons.get(position).age);
+        holder.personPhoto.setImageResource(persons.get(position).photoId);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigate(v.getContext(), persons.get(position));
+            }
+        });
     }
 
     @Override
@@ -41,16 +51,28 @@ public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.Person
         return persons.size();
     }
 
+    private void navigate(Context context, Person item) {
+
+        Uri gmmIntentUri = Uri.parse("google.navigation:q="+item.location);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        context.startActivity(mapIntent);
+    }
+
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
+        final View iView;
         TextView personName;
         TextView personAge;
         ImageView personPhoto;
 
         PersonViewHolder(View itemView) {
             super(itemView);
+            iView = itemView;
             personName = (TextView) itemView.findViewById(R.id.person_name);
             personAge = (TextView) itemView.findViewById(R.id.person_age);
             personPhoto = (ImageView) itemView.findViewById(R.id.person_photo);
         }
+
+
     }
 }

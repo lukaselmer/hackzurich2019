@@ -18,7 +18,7 @@ class FindTreehostFragment : Fragment() {
     private lateinit var findTreehostViewModel: FindTreehostViewModel
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewAdapter: TreeHostAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreateView(

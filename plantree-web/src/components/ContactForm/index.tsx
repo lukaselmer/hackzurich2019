@@ -5,7 +5,7 @@ import SectionButton from './../SectionButton';
 import './styles.scss';
 
 type P = {
-  showNameField: boolean;
+  showNameField?: boolean;
   onSubmit: (contactMessage: { name: string; email: string; message: string }) => void;
   status: {
     message: string;

@@ -5,7 +5,7 @@ import './styles.scss';
 type P = {
   [x: string]: any;
   color?: string;
-  size?: number;
+  size?: string | number;
   backgroundImage?: string;
   backgroundImageOpacity?: number;
   children: any;

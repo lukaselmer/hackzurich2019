@@ -4,7 +4,7 @@ import './styles.scss';
 type P = {
   [x: string]: any;
   parentColor?: string;
-  size?: string;
+  size?: string | number;
   state?: string;
   fullWidth?: boolean;
   children?: string | any[];

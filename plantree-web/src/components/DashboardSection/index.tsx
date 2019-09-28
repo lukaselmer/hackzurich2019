@@ -2,20 +2,23 @@ import React from 'react';
 import Section from './../Section';
 import SectionHeader from './../SectionHeader';
 import './styles.scss';
+import { Container } from 'bloomer';
 
 type P = {
   color: string;
-  size: number;
+  size: string | number;
   title: string;
   subtitle: string;
+  user: firebase.User;
 };
 
 function DashboardSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
-      <div className="container">
+      <Container>
         <SectionHeader title={props.title} subtitle={props.subtitle} centered={true} size={3} />
-      </div>
+        <Section>{props.user.email}</Section>
+      </Container>
     </Section>
   );
 }

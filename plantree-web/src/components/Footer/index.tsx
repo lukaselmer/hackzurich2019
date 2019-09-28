@@ -1,11 +1,11 @@
 import React from 'react';
 import Section from './../Section';
-import { Link } from './../../util/router.js';
+import { Link } from './../../util/router';
 import './styles.scss';
 
 type P = {
   color: string;
-  size: number;
+  size: string | number;
   logo?: string;
   copyright: string;
 };

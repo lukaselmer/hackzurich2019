@@ -4,7 +4,7 @@ import './styles.scss';
 type P = {
   [x: string]: any;
   image: string;
-  size: number;
+  size: string | number;
   alt: string;
 };
 

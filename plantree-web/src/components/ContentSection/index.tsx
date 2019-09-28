@@ -5,9 +5,9 @@ import './styles.scss';
 
 type P = {
   color: string;
-  size: number;
-  backgroundImage: string;
-  backgroundImageOpacity: number;
+  size: string | number;
+  backgroundImage?: string;
+  backgroundImageOpacity?: number;
   title: string;
   subtitle: string;
 };

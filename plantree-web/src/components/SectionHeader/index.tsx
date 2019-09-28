@@ -5,7 +5,7 @@ type P = {
   title: string;
   subtitle: string;
   centered?: boolean;
-  size: number;
+  size: string | number;
 };
 
 function SectionHeader(props: P) {

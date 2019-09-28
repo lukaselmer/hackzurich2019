@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavbarContainer from './../NavbarContainer';
-import { Link } from './../../util/router.js';
-import { useAuth } from './../../util/auth.js';
+import { Link } from './../../util/router';
+import { useAuth } from './../../util/auth';
 import './styles.scss';
 
 type P = {

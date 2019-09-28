@@ -6,7 +6,7 @@ import './styles.scss';
 
 type P = {
   color: string;
-  size: number;
+  size: string | number | string;
   title: string;
   subtitle: string;
 };

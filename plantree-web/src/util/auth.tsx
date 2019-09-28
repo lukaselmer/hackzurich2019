@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext, ReactElement } from 'react';
+import React, { useState, useEffect, useContext, createContext } from 'react';
 import queryString from 'query-string';
 import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -15,7 +15,7 @@ const authContext = createContext<ReturnType<typeof useProvideAuth>>(undefined a
 
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().
-export function ProvideAuth({ children }: { children: ReactElement[] }) {
+export function ProvideAuth({ children }: { children: any }) {
   const auth = useProvideAuth();
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }

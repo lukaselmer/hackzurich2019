@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Auth from './../Auth';
-import { useAuth } from './../../util/auth.js';
+import { useAuth } from './../../util/auth';
 import './styles.scss';
 
 type P = {

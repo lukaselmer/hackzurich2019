@@ -2,12 +2,12 @@ import React from 'react';
 import Section from './../Section';
 import SectionHeader from './../SectionHeader';
 import SignIn from './../SignIn';
-import { useRouter } from './../../util/router.js';
+import { useRouter } from './../../util/router';
 import './styles.scss';
 
 type P = {
   color?: string;
-  size?: number;
+  size?: string;
   title: string;
   subtitle: string;
   buttonText: string;

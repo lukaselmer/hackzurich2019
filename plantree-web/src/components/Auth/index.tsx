@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FormStatus from './../FormStatus';
 import FormField from './../FormField';
 import SectionButton from './../SectionButton';
-import { Link } from './../../util/router.js';
+import { Link } from './../../util/router';
 import './styles.scss';
 
 interface P {

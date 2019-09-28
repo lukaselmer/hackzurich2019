@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import Testimonials from './../Testimonials';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { Testimonials } from './../Testimonials';
 import './styles.scss';
 
 type P = {
@@ -11,7 +11,7 @@ type P = {
   subtitle: string;
 };
 
-function TestimonialsSection(props: P) {
+export function TestimonialsSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -47,5 +47,3 @@ function TestimonialsSection(props: P) {
     </Section>
   );
 }
-
-export default TestimonialsSection;

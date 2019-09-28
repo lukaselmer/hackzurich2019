@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundImage from './../BackgroundImage';
+import { BackgroundImage } from './../BackgroundImage';
 import './styles.scss';
 
 type P = {
@@ -11,7 +11,7 @@ type P = {
   children: any;
 };
 
-function Section(props: P) {
+export function Section(props: P) {
   const {
     color,
     size,
@@ -37,5 +37,3 @@ function Section(props: P) {
     </section>
   );
 }
-
-export default Section;

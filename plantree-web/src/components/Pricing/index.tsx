@@ -7,7 +7,7 @@ type P = {
   buttonText: React.ReactNode;
 };
 
-function Pricing(props: P) {
+export function Pricing(props: P) {
   return (
     <div className="columns is-centered is-variable is-5">
       {props.items.map((item, index) => (
@@ -34,5 +34,3 @@ function Pricing(props: P) {
     </div>
   );
 }
-
-export default Pricing;

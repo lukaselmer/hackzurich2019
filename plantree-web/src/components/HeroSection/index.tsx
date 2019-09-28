@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import SectionButton from './../SectionButton';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { SectionButton } from './../SectionButton';
 import './styles.scss';
 
 type P = {
@@ -14,7 +14,7 @@ type P = {
   image?: string;
 };
 
-function HeroSection(props: P) {
+export function HeroSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -36,5 +36,3 @@ function HeroSection(props: P) {
     </Section>
   );
 }
-
-export default HeroSection;

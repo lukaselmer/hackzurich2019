@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import SignUp from './../SignUp';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { SignUp } from './../SignUp';
 import { useRouter } from './../../util/router';
 import './styles.scss';
 
@@ -13,7 +13,7 @@ type P = {
   buttonText: string;
 };
 
-function SignUpSection(props: P) {
+export function SignUpSection(props: P) {
   const router = useRouter();
 
   // Go to page after signup
@@ -30,5 +30,3 @@ function SignUpSection(props: P) {
     </Section>
   );
 }
-
-export default SignUpSection;

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import DashboardSection from './../../components/DashboardSection';
+import { DashboardSection } from './../../components/DashboardSection';
 import { useAuth } from './../../util/auth';
 import { useRouter } from './../../util/router';
 import './styles.scss';
 
-function DashboardPage(_props: unknown) {
+export function DashboardPage(_props: unknown) {
   const auth = useAuth();
   const router = useRouter();
 
@@ -27,5 +27,3 @@ function DashboardPage(_props: unknown) {
     />
   );
 }
-
-export default DashboardPage;

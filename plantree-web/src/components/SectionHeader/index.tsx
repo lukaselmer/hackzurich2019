@@ -8,7 +8,7 @@ type P = {
   size: string | number;
 };
 
-function SectionHeader(props: P) {
+export function SectionHeader(props: P) {
   return (
     <>
       {(props.title || props.subtitle) && (
@@ -33,5 +33,3 @@ function SectionHeader(props: P) {
     </>
   );
 }
-
-export default SectionHeader;

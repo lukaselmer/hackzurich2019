@@ -1,13 +1,13 @@
 import React from 'react';
-import CenteredColumns from './../CenteredColumns';
-import Avatar from './../Avatar';
+import { CenteredColumns } from './../CenteredColumns';
+import { Avatar } from './../Avatar';
 import './styles.scss';
 
 type P = {
   items: { avatar: string; bio: string; name: string; company: string; role?: string }[];
 };
 
-function Testimonials(props: P) {
+export function Testimonials(props: P) {
   return (
     <CenteredColumns>
       {props.items.map((item, index) => (
@@ -29,5 +29,3 @@ function Testimonials(props: P) {
     </CenteredColumns>
   );
 }
-
-export default Testimonials;

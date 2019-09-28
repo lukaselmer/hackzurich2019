@@ -1,4 +1,4 @@
-function submit(data: any) {
+export function submit(data: any) {
   return fetch('/api/contact', {
     method: 'POST',
     headers: {
@@ -7,5 +7,3 @@ function submit(data: any) {
     body: JSON.stringify(data)
   }).then(r => r.json());
 }
-
-export default { submit };

@@ -1,8 +1,8 @@
 import React from 'react';
-import ChangePassSection from './../../components/ChangePassSection';
+import { ChangePassSection } from './../../components/ChangePassSection';
 import './styles.scss';
 
-function ChangepassPage(_props: unknown) {
+export function ChangepassPage(_props: unknown) {
   return (
     <ChangePassSection
       color="white"
@@ -13,5 +13,3 @@ function ChangepassPage(_props: unknown) {
     />
   );
 }
-
-export default ChangepassPage;

@@ -10,7 +10,7 @@ type P = {
   children?: string | any[];
 };
 
-function SectionButton(props: P) {
+export function SectionButton(props: P) {
   const {
     parentColor,
     size,
@@ -38,5 +38,3 @@ function SectionButton(props: P) {
     </button>
   );
 }
-
-export default SectionButton;

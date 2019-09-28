@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Auth from './../Auth';
+import { Auth } from './../Auth';
 import { useAuth } from './../../util/auth';
 import './styles.scss';
 
@@ -9,7 +9,7 @@ type P = {
   parentColor?: string;
 };
 
-function SignIn(props: P) {
+export function SignIn(props: P) {
   const auth = useAuth();
   const [status, setStatus] = useState();
 
@@ -38,5 +38,3 @@ function SignIn(props: P) {
     />
   );
 }
-
-export default SignIn;

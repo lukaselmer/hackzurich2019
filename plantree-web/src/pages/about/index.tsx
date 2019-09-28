@@ -1,9 +1,9 @@
 import React from 'react';
-import ContentSection from './../../components/ContentSection';
-import TeamBiosSection from './../../components/TeamBiosSection';
+import { ContentSection } from './../../components/ContentSection';
+import { TeamBiosSection } from './../../components/TeamBiosSection';
 import './styles.scss';
 
-function AboutPage(_props: unknown) {
+export function AboutPage(_props: unknown) {
   return (
     <>
       <ContentSection
@@ -16,5 +16,3 @@ function AboutPage(_props: unknown) {
     </>
   );
 }
-
-export default AboutPage;

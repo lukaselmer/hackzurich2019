@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import ForgotPass from './../ForgotPass';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { ForgotPass } from './../ForgotPass';
 import './styles.scss';
 
 type P = {
@@ -12,7 +12,7 @@ type P = {
   buttonText: string;
 };
 
-function ForgotPassSection(props: P) {
+export function ForgotPassSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -22,5 +22,3 @@ function ForgotPassSection(props: P) {
     </Section>
   );
 }
-
-export default ForgotPassSection;

@@ -5,7 +5,7 @@ type P = {
   items: { title: string; description: string; image: string }[];
 };
 
-function Features(props: P) {
+export function Features(props: P) {
   return (
     <div className="Features">
       {props.items.map((item, index) => (
@@ -27,5 +27,3 @@ function Features(props: P) {
     </div>
   );
 }
-
-export default Features;

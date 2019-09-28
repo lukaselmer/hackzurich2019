@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import FormStatus from './../FormStatus';
-import FormField from './../FormField';
-import SectionButton from './../SectionButton';
+import { FormStatus } from './../FormStatus';
+import { FormField } from './../FormField';
+import { SectionButton } from './../SectionButton';
 import './styles.scss';
 
 type P = {
@@ -15,7 +15,7 @@ type P = {
   buttonText: string;
 };
 
-function ContactForm(props: P) {
+export function ContactForm(props: P) {
   // State for input values
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -144,5 +144,3 @@ function ContactForm(props: P) {
     </>
   );
 }
-
-export default ContactForm;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import TeamBios from './../TeamBios';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { TeamBios } from './../TeamBios';
 import './styles.scss';
 
 type P = {
@@ -11,7 +11,7 @@ type P = {
   subtitle: string;
 };
 
-function TeamBiosSection(props: P) {
+export function TeamBiosSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -54,5 +54,3 @@ function TeamBiosSection(props: P) {
     </Section>
   );
 }
-
-export default TeamBiosSection;

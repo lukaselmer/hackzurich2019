@@ -11,7 +11,7 @@ type P = {
   items: Client[];
 };
 
-function Clients(props: P) {
+export function Clients(props: P) {
   return (
     <div className="columns is-centered is-multiline">
       {props.items.map((item, index) => {
@@ -27,5 +27,3 @@ function Clients(props: P) {
     </div>
   );
 }
-
-export default Clients;

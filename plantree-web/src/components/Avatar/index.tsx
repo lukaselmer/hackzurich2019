@@ -8,7 +8,7 @@ type P = {
   alt: string;
 };
 
-function Avatar(props: P) {
+export function Avatar(props: P) {
   const { image, size, alt, ...otherProps } = props;
 
   return (
@@ -17,5 +17,3 @@ function Avatar(props: P) {
     </figure>
   );
 }
-
-export default Avatar;

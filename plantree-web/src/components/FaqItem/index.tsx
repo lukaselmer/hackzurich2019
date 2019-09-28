@@ -6,7 +6,7 @@ type P = {
   answer: string;
 };
 
-function FaqItem(props: P) {
+export function FaqItem(props: P) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -22,5 +22,3 @@ function FaqItem(props: P) {
     </article>
   );
 }
-
-export default FaqItem;

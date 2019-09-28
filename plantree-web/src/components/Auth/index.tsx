@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import FormStatus from './../FormStatus';
-import FormField from './../FormField';
-import SectionButton from './../SectionButton';
+import { FormStatus } from './../FormStatus';
+import { FormField } from './../FormField';
+import { SectionButton } from './../SectionButton';
 import { Link } from './../../util/router';
 import './styles.scss';
 
@@ -18,7 +18,7 @@ interface Field {
   message: string;
 }
 
-function Auth(props: P) {
+export function Auth(props: P) {
   // State for all inputs
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
@@ -168,5 +168,3 @@ function Auth(props: P) {
     </div>
   );
 }
-
-export default Auth;

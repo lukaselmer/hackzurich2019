@@ -1,6 +1,6 @@
 import React from 'react';
-import ContentSection from '../../../components/ContentSection';
-import TeamBiosSection from '../../../components/TeamBiosSection';
+import { ContentSection } from '../../../components/ContentSection';
+import { TeamBiosSection } from '../../../components/TeamBiosSection';
 import './styles.scss';
 
 export function FindPlantingLocations(_props: unknown) {

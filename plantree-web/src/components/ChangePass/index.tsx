@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Auth from './../Auth';
+import { Auth } from './../Auth';
 import { useAuth } from './../../util/auth';
 import './styles.scss';
 
-function ChangePass(props: { buttonText: string; parentColor: string }) {
+export function ChangePass(props: { buttonText: string; parentColor: string }) {
   const auth = useAuth();
   const [status, setStatus] = useState();
 
@@ -35,5 +35,3 @@ function ChangePass(props: { buttonText: string; parentColor: string }) {
     />
   );
 }
-
-export default ChangePass;

@@ -1,8 +1,8 @@
 import React from 'react';
-import ForgotPassSection from './../../components/ForgotPassSection';
+import { ForgotPassSection } from './../../components/ForgotPassSection';
 import './styles.scss';
 
-function ForgotpassPage(_props: unknown) {
+export function ForgotpassPage(_props: unknown) {
   return (
     <ForgotPassSection
       color="white"
@@ -13,5 +13,3 @@ function ForgotpassPage(_props: unknown) {
     />
   );
 }
-
-export default ForgotpassPage;

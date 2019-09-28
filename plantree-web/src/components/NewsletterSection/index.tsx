@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from './../Section';
-import Newsletter from './../Newsletter';
+import { Section } from './../Section';
+import { Newsletter } from './../Newsletter';
 import './styles.scss';
 
 type P = {
@@ -13,7 +13,7 @@ type P = {
   subscribedMessage: string;
 };
 
-function NewsletterSection(props: P) {
+export function NewsletterSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -40,5 +40,3 @@ function NewsletterSection(props: P) {
     </Section>
   );
 }
-
-export default NewsletterSection;

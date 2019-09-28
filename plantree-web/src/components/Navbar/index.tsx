@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavbarContainer from './../NavbarContainer';
+import { NavbarContainer } from './../NavbarContainer';
 import { Link } from './../../util/router';
 import { useAuth } from './../../util/auth';
 import './styles.scss';
@@ -10,7 +10,7 @@ type P = {
   logo: string | undefined;
 };
 
-function Navbar(props: P) {
+export function Navbar(props: P) {
   const auth = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -102,5 +102,3 @@ function Navbar(props: P) {
     </NavbarContainer>
   );
 }
-
-export default Navbar;

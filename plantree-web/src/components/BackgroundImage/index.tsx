@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 
-function BackgroundImage(props: { image: string; opacity?: number }) {
+export function BackgroundImage(props: { image: string; opacity?: number }) {
   return (
     <div
       className="BackgroundImage"
@@ -12,5 +12,3 @@ function BackgroundImage(props: { image: string; opacity?: number }) {
     />
   );
 }
-
-export default BackgroundImage;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import Contact from './../Contact';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { Contact } from './../Contact';
 import './styles.scss';
 
 type P = {
@@ -13,7 +13,7 @@ type P = {
   buttonText: string;
 };
 
-function ContactSection(props: P) {
+export function ContactSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="ContactSection__container container">
@@ -27,5 +27,3 @@ function ContactSection(props: P) {
     </Section>
   );
 }
-
-export default ContactSection;

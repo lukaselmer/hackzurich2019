@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionButton from './../SectionButton';
+import { SectionButton } from './../SectionButton';
 import * as newsletter from './../../util/newsletter';
 import './styles.scss';
 
@@ -13,7 +13,7 @@ type P = {
   subscribedMessage: string;
 };
 
-function Newsletter(props: P) {
+export function Newsletter(props: P) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -63,5 +63,3 @@ function Newsletter(props: P) {
     </>
   );
 }
-
-export default Newsletter;

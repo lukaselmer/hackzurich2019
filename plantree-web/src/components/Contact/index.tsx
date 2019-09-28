@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ContactForm from './../ContactForm';
-import contact from './../../util/contact';
+import { ContactForm } from './../ContactForm';
+import { submit } from './../../util/contact';
 import './styles.scss';
 
 type P = {
@@ -9,13 +9,13 @@ type P = {
   buttonText: string;
 };
 
-function Contact(props: P) {
+export function Contact(props: P) {
   const [status, setStatus] = useState();
 
   const onSubmit = ({ name, email, message }: { name: string; email: string; message: string }) => {
     setStatus({ type: 'pending' });
 
-    contact.submit({ name, email, message }).then(() => {
+    submit({ name, email, message }).then(() => {
       setStatus({
         type: 'success',
         message: "Your message has been sent! We'll get back to you soon."
@@ -32,5 +32,3 @@ function Contact(props: P) {
     />
   );
 }
-
-export default Contact;

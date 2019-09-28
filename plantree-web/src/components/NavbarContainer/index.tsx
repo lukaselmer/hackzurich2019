@@ -7,7 +7,7 @@ type P = {
   children: React.ReactNode;
 };
 
-function NavbarContainer(props: P) {
+export function NavbarContainer(props: P) {
   return (
     <nav
       className={
@@ -18,5 +18,3 @@ function NavbarContainer(props: P) {
     </nav>
   );
 }
-
-export default NavbarContainer;

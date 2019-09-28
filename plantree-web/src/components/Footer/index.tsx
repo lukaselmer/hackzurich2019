@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './../Section';
+import { Section } from './../Section';
 import { Link } from './../../util/router';
 import './styles.scss';
 
@@ -10,7 +10,7 @@ type P = {
   copyright: string;
 };
 
-function Footer(props: P) {
+export function Footer(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="FooterComponent__container container">
@@ -49,5 +49,3 @@ function Footer(props: P) {
     </Section>
   );
 }
-
-export default Footer;

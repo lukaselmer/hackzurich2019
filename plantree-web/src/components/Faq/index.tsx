@@ -1,12 +1,12 @@
 import React from 'react';
-import FaqItem from './../FaqItem';
+import { FaqItem } from './../FaqItem';
 import './styles.scss';
 
 type P = {
   items: { question: string; answer: string }[];
 };
 
-function Faq(props: P) {
+export function Faq(props: P) {
   return (
     <>
       {props.items.map((item, index) => (
@@ -15,5 +15,3 @@ function Faq(props: P) {
     </>
   );
 }
-
-export default Faq;

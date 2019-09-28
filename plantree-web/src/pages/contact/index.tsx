@@ -1,8 +1,8 @@
 import React from 'react';
-import ContactSection from './../../components/ContactSection';
+import { ContactSection } from './../../components/ContactSection';
 import './styles.scss';
 
-function ContactPage(_props: unknown) {
+export function ContactPage(_props: unknown) {
   return (
     <ContactSection
       color="white"
@@ -14,5 +14,3 @@ function ContactPage(_props: unknown) {
     />
   );
 }
-
-export default ContactPage;

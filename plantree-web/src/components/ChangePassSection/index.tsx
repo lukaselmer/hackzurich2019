@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import ChangePass from './../ChangePass';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { ChangePass } from './../ChangePass';
 import './styles.scss';
 
 type P = {
@@ -12,7 +12,7 @@ type P = {
   buttonText: string;
 };
 
-function ChangePassSection(props: P) {
+export function ChangePassSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -22,5 +22,3 @@ function ChangePassSection(props: P) {
     </Section>
   );
 }
-
-export default ChangePassSection;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import Faq from './../Faq';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { Faq } from './../Faq';
 import './styles.scss';
 
 type P = {
@@ -11,7 +11,7 @@ type P = {
   subtitle: string;
 };
 
-function FaqSection(props: P) {
+export function FaqSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
@@ -49,5 +49,3 @@ function FaqSection(props: P) {
     </Section>
   );
 }
-
-export default FaqSection;

@@ -1,8 +1,8 @@
 import React from 'react';
-import SignUpSection from './../../components/SignUpSection';
+import { SignUpSection } from './../../components/SignUpSection';
 import './styles.scss';
 
-function SignupPage(_props: unknown) {
+export function SignupPage(_props: unknown) {
   return (
     <SignUpSection
       color="white"
@@ -13,5 +13,3 @@ function SignupPage(_props: unknown) {
     />
   );
 }
-
-export default SignupPage;

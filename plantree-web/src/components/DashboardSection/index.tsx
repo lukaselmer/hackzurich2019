@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
 import './styles.scss';
 import { Container } from 'bloomer';
 
@@ -12,7 +12,7 @@ type P = {
   user: firebase.User;
 };
 
-function DashboardSection(props: P) {
+export function DashboardSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <Container>
@@ -22,5 +22,3 @@ function DashboardSection(props: P) {
     </Section>
   );
 }
-
-export default DashboardSection;

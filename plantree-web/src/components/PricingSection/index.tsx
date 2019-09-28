@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
-import Pricing from './../Pricing';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
+import { Pricing } from './../Pricing';
 import './styles.scss';
 
 type P = {
@@ -11,7 +11,7 @@ type P = {
   subtitle: string;
 };
 
-function PricingSection(props: P) {
+export function PricingSection(props: P) {
   return (
     <Section color={props.color} size={props.size} id="pricing">
       <div className="PricingSection__container container">
@@ -43,5 +43,3 @@ function PricingSection(props: P) {
     </Section>
   );
 }
-
-export default PricingSection;

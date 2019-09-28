@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from './../Section';
-import SectionHeader from './../SectionHeader';
+import { Section } from './../Section';
+import { SectionHeader } from './../SectionHeader';
 import './styles.scss';
 
 type P = {
@@ -12,7 +12,7 @@ type P = {
   subtitle: string;
 };
 
-function ContentSection(props: P) {
+export function ContentSection(props: P) {
   return (
     <Section
       color={props.color}
@@ -26,5 +26,3 @@ function ContentSection(props: P) {
     </Section>
   );
 }
-
-export default ContentSection;

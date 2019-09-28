@@ -1,13 +1,13 @@
 import React from 'react';
-import CenteredColumns from './../CenteredColumns';
-import Avatar from './../Avatar';
+import { CenteredColumns } from './../CenteredColumns';
+import { Avatar } from './../Avatar';
 import './styles.scss';
 
 type P = {
   people: { avatar: string; role: string; name: string; bio: string }[];
 };
 
-function TeamBios(props: P) {
+export function TeamBios(props: P) {
   return (
     <CenteredColumns>
       {props.people.map((person, index) => (
@@ -29,5 +29,3 @@ function TeamBios(props: P) {
     </CenteredColumns>
   );
 }
-
-export default TeamBios;

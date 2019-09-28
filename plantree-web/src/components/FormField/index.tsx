@@ -15,7 +15,7 @@ type P = {
     | undefined;
 };
 
-function FormField(props: P) {
+export function FormField(props: P) {
   return (
     <div className="field">
       <div className="control">
@@ -43,5 +43,3 @@ function FormField(props: P) {
     </div>
   );
 }
-
-export default FormField;

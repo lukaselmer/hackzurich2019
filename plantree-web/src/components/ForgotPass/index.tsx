@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Auth from './../Auth';
+import { Auth } from './../Auth';
 import { useAuth } from './../../util/auth';
 import './styles.scss';
 
@@ -8,7 +8,7 @@ type P = {
   parentColor: string;
 };
 
-function ForgotPass(props: P) {
+export function ForgotPass(props: P) {
   const auth = useAuth();
   const [status, setStatus] = useState();
 
@@ -40,5 +40,3 @@ function ForgotPass(props: P) {
     />
   );
 }
-
-export default ForgotPass;

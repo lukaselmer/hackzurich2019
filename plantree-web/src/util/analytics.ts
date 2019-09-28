@@ -4,7 +4,7 @@ import { history } from './router';
 // import googleAnalyticsPlugin from 'analytics-plugin-ga';
 // Initialize analytics and plugins
 // Documentation: https://getanalytics.io
-const analytics = Analytics({
+export const analytics = Analytics({
   debug: process.env.NODE_ENV !== 'production',
   plugins: [
     // 1) Create a Google Analytics account: https://bit.ly/2G1ZWNN
@@ -27,5 +27,3 @@ if (typeof window !== 'undefined') {
 history.listen(() => {
   analytics.page();
 });
-
-export default analytics;

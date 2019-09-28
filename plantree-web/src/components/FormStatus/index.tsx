@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 
-function FormStatus(props: { type: string; message: string }) {
+export function FormStatus(props: { type: string; message: string }) {
   return (
     <div
       className={
@@ -14,5 +14,3 @@ function FormStatus(props: { type: string; message: string }) {
     </div>
   );
 }
-
-export default FormStatus;

@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class FindTreehostViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "Die folgenden Leute bieten einen Ort in deiner Nähe"
     }
     val text: LiveData<String> = _text
 }

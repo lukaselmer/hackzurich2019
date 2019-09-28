@@ -13,11 +13,11 @@ import java.util.List;
 
 import ch.christofbuechi.plantreemobile.R;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.PersonViewHolder> {
+public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.PersonViewHolder> {
 
     private List<Person> persons;
 
-    public MyAdapter(List<Person> persons) {
+    public TreeHostAdapter(List<Person> persons) {
         this.persons = persons;
     }
 

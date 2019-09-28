@@ -1,5 +1,6 @@
 package ch.christofbuechi.plantreemobile.ui.treehost;
 
+import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +21,11 @@ public class Person {
     // This method creates an ArrayList that has three Person objects
 // Checkout the project associated with this tutorial on Github if
 // you want to use the same images.
-    public static List<Person> initializeData(){
+    public static List<Person> initializeData(Context context){
         List<Person> persons = new ArrayList<>();
-        persons.add(new Person("Emma Wilson", "23 years old", R.drawable.ic_menu_gallery));
-        persons.add(new Person("Lavery Maiss", "25 years old", R.drawable.ic_menu_gallery));
-        persons.add(new Person("Lillie Watts", "35 years old", R.drawable.ic_menu_gallery));
+        persons.add(new Person("Heidi Treehost", "55 years old", R.drawable.ic_person_black_24dp));
+        persons.add(new Person("Emma Wilson", "23 years old", R.drawable.ic_person_black_24dp));
+        persons.add(new Person("Company Evironmental", "-", R.drawable.ic_business_black_24dp));
         return persons;
     }
 }

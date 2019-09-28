@@ -1,22 +1,13 @@
 import React from 'react';
 import './styles.scss';
 import { Link } from './../../../util/router';
-import { Container, Content, Button, Breadcrumb, BreadcrumbItem } from 'bloomer';
+import { Container, Content, Button } from 'bloomer';
+import { Breadcrumbs } from '../../../components/Breadcrumbs';
 
 export function MyTreeLocations(_props: unknown) {
   return (
     <Container>
-      <Breadcrumb>
-        <ul>
-          <BreadcrumbItem>
-            <Link to="/">Home</Link>
-          </BreadcrumbItem>
-          <BreadcrumbItem isActive>
-            {/* eslint-disable-next-line */}
-            <a>Treehost</a>
-          </BreadcrumbItem>
-        </ul>
-      </Breadcrumb>
+      <Breadcrumbs items={[['Home', '/'], ['Treehost', '']]} />
 
       <Content style={{ minHeight: '500px', paddingTop: '20px' }}>
         <h1>Your planting locations</h1>

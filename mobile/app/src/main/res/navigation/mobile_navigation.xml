@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ch.christofbuechi.plantreemobile.ui.gallery.InfoFragment"
+        android:id="@+id/nav_info"
+        android:name="ch.christofbuechi.plantreemobile.ui.info.InfoFragment"
         android:label="@string/menu_info"
         tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="ch.christofbuechi.plantreemobile.ui.slideshow.FindTreehostFragment"
+        android:id="@+id/nav_findtreehost"
+        android:name="ch.christofbuechi.plantreemobile.ui.treehost.FindTreehostFragment"
         android:label="@string/menu_findTreehost"
         tools:layout="@layout/fragment_find_treehost" />
 

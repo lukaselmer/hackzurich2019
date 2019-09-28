@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.slideshow
+package ch.christofbuechi.plantreemobile.ui.tools
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ch.christofbuechi.plantreemobile.R
 
-class FindTreehostFragment : Fragment() {
+class MapsFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var toolsViewModel: MapsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-            ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_find_treehost, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(this, Observer {
+        toolsViewModel =
+            ViewModelProviders.of(this).get(MapsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_tools, container, false)
+        val textView: TextView = root.findViewById(R.id.text_tools)
+        toolsViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

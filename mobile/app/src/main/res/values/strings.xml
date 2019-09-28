@@ -11,4 +11,5 @@
     <string name="menu_info">Info</string>
     <string name="menu_findTreehost">Find a Treehost</string>
     <string name="menu_share">Share Awareness</string>
+    <string name="a11y_plant_item_image">image</string>
 </resources>

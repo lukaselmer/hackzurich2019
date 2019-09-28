@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.gallery
+package ch.christofbuechi.plantreemobile.ui.info
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,18 +12,18 @@ import ch.christofbuechi.plantreemobile.R
 
 class InfoFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
+    private lateinit var infoViewModel: InfoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProviders.of(this).get(GalleryViewModel::class.java)
+        infoViewModel =
+            ViewModelProviders.of(this).get(InfoViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_info, container, false)
         val textView: TextView = root.findViewById(R.id.text_gallery)
-        galleryViewModel.text.observe(this, Observer {
+        infoViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

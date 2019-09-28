@@ -18,9 +18,25 @@ import com.google.android.libraries.maps.SupportMapFragment;
 import com.google.android.libraries.maps.model.LatLng;
 import com.google.android.libraries.maps.model.MarkerOptions;
 
+import ch.christofbuechi.plantreemobile.MainActivity;
 import ch.christofbuechi.plantreemobile.R;
 
 public class MyTreesFragment extends Fragment implements OnMapReadyCallback {
+
+
+    @Override
+    public void onStart() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.GONE);
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.VISIBLE);
+        super.onStop();
+    }
 
     @Nullable
     @Override
@@ -42,12 +58,12 @@ public class MyTreesFragment extends Fragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        GoogleMap mMap = googleMap;
+    public void onMapReady(GoogleMap map) {
 
-        // Add a marker in Sydney, Australia, and move the camera.
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        for (TreePlace place : TreePlace.getSamples()) {
+            map.addMarker(new MarkerOptions().position(place.asLatLng()).title(place.getTextForMarker()));
+        }
+
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(47.389642, 8.516050),15), 1, null);
     }
 }

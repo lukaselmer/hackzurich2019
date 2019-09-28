@@ -22,6 +22,7 @@ import { MyUpcompingPlantings } from '../planter/my-upcomping-plantings';
 import { MyTrees } from '../planter/my-trees';
 import { MyTreeLocations } from '../treehost/my-tree-locations';
 import { OfferPlantingLocation } from '../treehost/offer-planting-location';
+import { Treehost } from '../treehost/treehost';
 
 export function App(_props: any) {
   return (
@@ -46,6 +47,7 @@ export function App(_props: any) {
             <Route exact path="/planter/my-upcoming-plantings" component={MyUpcompingPlantings} />
             <Route exact path="/planter/my-trees" component={MyTrees} />
 
+            <Route exact path="/treehost" component={Treehost} />
             <Route exact path="/treehost/my-tree-locations" component={MyTreeLocations} />
             <Route exact path="/treehost/offer-planting-location" component={OfferPlantingLocation} />
 

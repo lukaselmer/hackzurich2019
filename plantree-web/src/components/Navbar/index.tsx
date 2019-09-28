@@ -55,19 +55,22 @@ export function Navbar(props: P) {
                     </Link>
                   </div>
                 </div>
-                <div className="navbar-item has-dropdown is-hoverable">
+                <Link className="navbar-item" to="/treehost">
+                  Treehost
+                </Link>
+                {/* <div className="navbar-item has-dropdown is-hoverable">
                   <Link className="navbar-link" to="/">
                     Treehost
                   </Link>
                   <div className="navbar-dropdown is-boxed">
-                    <Link className="navbar-item" to="/treehost/my-tree-locations">
-                      My tree locations
-                    </Link>
                     <Link className="navbar-item" to="/treehost/offer-planting-location">
                       Offer planting location
                     </Link>
+                    <Link className="navbar-item" to="/treehost/my-tree-locations">
+                      My tree locations
+                    </Link>
                   </div>
-                </div>
+                </div> */}
                 <div className="navbar-item has-dropdown is-hoverable">
                   <Link className="navbar-link" to="/">
                     Account

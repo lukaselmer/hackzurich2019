@@ -12,7 +12,7 @@ export function MyTreeLocations(_props: unknown) {
             <Link to="/">Home</Link>
           </BreadcrumbItem>
           <BreadcrumbItem isActive>
-            <a>Treehost</a>
+            <a href="#">Treehost</a>
           </BreadcrumbItem>
         </ul>
       </Breadcrumb>

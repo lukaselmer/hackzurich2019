@@ -64,6 +64,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
               <Link to="/treehost">Treehost</Link>
             </BreadcrumbItem>
             <BreadcrumbItem isActive>
+              {/* eslint-disable-next-line */}
               <a>Offer Planting Location</a>
             </BreadcrumbItem>
           </ul>
@@ -191,7 +192,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
       <Column key={tree.name}>
         <div
           style={{
-            backgroundImage: `url(${`trees/${tree.name}.jpg`})`,
+            backgroundImage: `url(${`/trees/${tree.name.toLowerCase()}.jpg`})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             minHeight: '300px',

@@ -23,59 +23,66 @@ import { MyTrees } from '../planter/my-trees';
 import { MyTreeLocations } from '../treehost/my-tree-locations';
 import { OfferPlantingLocation } from '../treehost/offer-planting-location';
 import { Treehost } from '../treehost/treehost';
+import { LoadScript } from '@react-google-maps/api';
 
 export function App(_props: any) {
   return (
-    <ProvideAuth>
-      <Router>
-        <>
-          <Navbar color="white" spaced={true} logo="https://uploads.divjoy.com/logo.svg" />
+    <LoadScript
+      id="script-loader"
+      googleMapsApiKey="AIzaSyBI4LWE7CibpWAg-o6MqvyOn2Y59d93BCQ"
+      libraries={['places']}
+    >
+      <ProvideAuth>
+        <Router>
+          <>
+            <Navbar color="white" spaced={true} logo="https://uploads.divjoy.com/logo.svg" />
 
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/faq" component={FaqPage} />
-            <Route exact path="/pricing" component={PricingPage} />
-            <Route exact path="/contact" component={ContactPage} />
-            <Route exact path="/dashboard" component={DashboardPage} />
-            <Route exact path="/signin" component={SigninPage} />
-            <Route exact path="/signup" component={SignupPage} />
-            <Route exact path="/forgotpass" component={ForgotpassPage} />
-            <Route exact path="/changepass" component={ChangepassPage} />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/faq" component={FaqPage} />
+              <Route exact path="/pricing" component={PricingPage} />
+              <Route exact path="/contact" component={ContactPage} />
+              <Route exact path="/dashboard" component={DashboardPage} />
+              <Route exact path="/signin" component={SigninPage} />
+              <Route exact path="/signup" component={SignupPage} />
+              <Route exact path="/forgotpass" component={ForgotpassPage} />
+              <Route exact path="/changepass" component={ChangepassPage} />
 
-            <Route exact path="/planter/find-planting-locations" component={FindPlantingLocations} />
-            <Route exact path="/planter/my-upcoming-plantings" component={MyUpcompingPlantings} />
-            <Route exact path="/planter/my-trees" component={MyTrees} />
+              <Route exact path="/planter/find-planting-locations" component={FindPlantingLocations} />
+              <Route exact path="/planter/my-upcoming-plantings" component={MyUpcompingPlantings} />
+              <Route exact path="/planter/my-trees" component={MyTrees} />
 
-            <Route exact path="/treehost" component={Treehost} />
-            <Route exact path="/treehost/my-tree-locations" component={MyTreeLocations} />
-            <Route exact path="/treehost/offer-planting-location" component={OfferPlantingLocation} />
+              <Route exact path="/treehost" component={Treehost} />
+              <Route exact path="/treehost/my-tree-locations" component={MyTreeLocations} />
+              <Route exact path="/treehost/offer-planting-location" component={OfferPlantingLocation} />
 
-            <Route
-              component={({ location }: RouteProps) => {
-                return (
-                  <div
-                    style={{
-                      padding: '50px',
-                      width: '100%',
-                      textAlign: 'center'
-                    }}
-                  >
-                    The page <code>{location && location.pathname}</code> could not be found.
-                  </div>
-                );
-              }}
+              <Route
+                component={({ location }: RouteProps) => {
+                  return (
+                    <div
+                      style={{
+                        padding: '50px',
+                        width: '100%',
+                        textAlign: 'center'
+                      }}
+                    >
+                      The page <code>{location && location.pathname}</code> could not be found.
+                    </div>
+                  );
+                }}
+              />
+            </Switch>
+
+            <Footer
+              color="light"
+              size="normal"
+              logo="https://uploads.divjoy.com/logo.svg"
+              copyright="© 2019 Company"
             />
-          </Switch>
-
-          <Footer
-            color="light"
-            size="normal"
-            logo="https://uploads.divjoy.com/logo.svg"
-            copyright="© 2019 Company"
-          />
-        </>
-      </Router>
-    </ProvideAuth>
+          </>
+        </Router>
+      </ProvideAuth>
+    </LoadScript>
   );
 }

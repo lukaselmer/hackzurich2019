@@ -2,6 +2,11 @@ package ch.christofbuechi.plantreemobile.ui.upcomingplantings;
 
 import android.content.Context;
 
+import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,10 +31,11 @@ public class Planting {
     public static List<Planting> initializeData(Context context){
         List<Planting> plantings = new ArrayList<>();
 
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");
 
-        plantings.add(new Planting("Zurich", 7,  new Date(), "2.5h"));
-        plantings.add(new Planting("Baden", 1,  new Date(2019, 10, 30), "1h"));
-        plantings.add(new Planting("Uster", 3,  new Date(2019, 10, 3), "4h"));
+        plantings.add(new Planting("Zurich", 7, formatter.parseDateTime("03/10/2019 17:00:00").toDate() , "2.5h"));
+        plantings.add(new Planting("Baden", 1, formatter.parseDateTime("17/10/2019 17:00:00").toDate() , "1h"));
+        plantings.add(new Planting("Uster", 3,  formatter.parseDateTime("30/09/2019 17:00:00").toDate(), "4h"));
         return plantings;
     }
 }

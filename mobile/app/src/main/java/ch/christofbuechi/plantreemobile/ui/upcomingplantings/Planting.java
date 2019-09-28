@@ -27,9 +27,9 @@ public class Planting {
         List<Planting> plantings = new ArrayList<>();
 
 
-        plantings.add(new Planting("Schwamendingen, Zurich", 12,  new Date(), "2h"));
-        plantings.add(new Planting("Baden", 1,  new Date(), "2h"));
-        plantings.add(new Planting("Uster", 3,  new Date(), "2h"));
+        plantings.add(new Planting("Zurich", 7,  new Date(), "2.5h"));
+        plantings.add(new Planting("Baden", 1,  new Date(2019, 10, 30), "1h"));
+        plantings.add(new Planting("Uster", 3,  new Date(2019, 10, 3), "4h"));
         return plantings;
     }
 }

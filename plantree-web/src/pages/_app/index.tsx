@@ -24,7 +24,7 @@ import { MyTreeLocations } from '../treehost/my-tree-locations';
 import { OfferPlantingLocation } from '../treehost/offer-planting-location';
 import { Treehost } from '../treehost/treehost';
 import { LoadScript } from '@react-google-maps/api';
-import logo from '../../images/logo.svg';
+import logo from '../../images/logo-horizontal.svg';
 
 export function App(_props: any) {
   return (

@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_account,
                 R.id.nav_howto,
                 R.id.nav_findtreehost,
-                R.id.nav_upcoming_plantins,
+                R.id.nav_upcoming_plantings,
                 R.id.nav_my_trees,
                 R.id.nav_share
             ), drawerLayout

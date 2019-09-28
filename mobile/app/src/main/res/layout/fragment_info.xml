@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Welcome to PlanTree"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="32sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -22,9 +23,10 @@
         android:layout_marginTop="108dp"
         android:layout_height="wrap_content"
         android:lines="4"
+        android:layout_margin="20dp"
         android:maxLines="5"
         android:singleLine="false"
-        android:text="Here you can find all informations around how it works"
+        android:text="Thanks for interest. Let us show you how it works. The video below should cover your questions!"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/info_title"

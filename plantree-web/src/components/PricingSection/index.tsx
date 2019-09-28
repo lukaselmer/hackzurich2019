@@ -16,6 +16,7 @@ export function PricingSection(props: P) {
     <Section color={props.color} size={props.size} id="pricing">
       <div className="PricingSection__container container">
         <SectionHeader title={props.title} subtitle={props.subtitle} centered={true} size={3} />
+
         <Pricing
           buttonText="Choose"
           onChoosePlan={planId => {
@@ -24,18 +25,22 @@ export function PricingSection(props: P) {
           }}
           items={[
             {
-              id: 'monthly',
-              timespan: 'Monthly',
-              price: '29',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam.'
+              id: 'yearly',
+              timespan: 'Silver',
+              price: '20',
+              description: 'Sponsor the plantation of 2 trees per month.'
             },
             {
-              id: 'yearly',
-              timespan: 'Yearly',
-              price: '19',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae.'
+              id: 'monthly',
+              timespan: 'Gold',
+              price: '30',
+              description: 'Sponsor the plantation of 3 trees per month.'
+            },
+            {
+              id: 'one-time',
+              timespan: 'Custom',
+              price: '?',
+              description: 'Sponsor any amount to plant trees.'
             }
           ]}
         />

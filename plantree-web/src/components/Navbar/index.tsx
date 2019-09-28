@@ -58,6 +58,9 @@ export function Navbar(props: P) {
                 <Link className="navbar-item" to="/treehost">
                   Treehost
                 </Link>
+                <Link className="navbar-item" to="/pricing">
+                  Sponsor
+                </Link>
                 {/* <div className="navbar-item has-dropdown is-hoverable">
                   <Link className="navbar-link" to="/">
                     Treehost

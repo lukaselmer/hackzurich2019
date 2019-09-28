@@ -74,12 +74,7 @@ export function App(_props: any) {
               />
             </Switch>
 
-            <Footer
-              color="light"
-              size="normal"
-              logo="https://uploads.divjoy.com/logo.svg"
-              copyright="© 2019 Company"
-            />
+            <Footer color="light" size="normal" logo={logo} copyright="© 2019 PLANTree" />
           </>
         </Router>
       </ProvideAuth>

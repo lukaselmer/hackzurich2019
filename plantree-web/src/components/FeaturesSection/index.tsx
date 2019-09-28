@@ -3,6 +3,7 @@ import { Section } from './../Section';
 import { SectionHeader } from './../SectionHeader';
 import { Features } from './../Features';
 import './styles.scss';
+import reforestation from '../../images/reforestation.jpg';
 
 type P = {
   color: string;
@@ -15,14 +16,19 @@ export function FeaturesSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
-        <SectionHeader title={props.title} subtitle={props.subtitle} centered={true} size={3} />
+        <SectionHeader
+          title="Call for action"
+          subtitle="We need to stand together to fight climate change. There is a lot at stake for humanity, animals and nature."
+          centered={true}
+          size={3}
+        />
         <Features
           items={[
             {
-              title: 'Explore',
+              title: 'Potential',
               description:
-                'Integer ornare neque mauris, ac vulputate lacus venenatis et. Pellentesque ut ultrices purus.',
-              image: 'https://uploads.divjoy.com/undraw-mind_map_cwng.svg'
+                'Around 0.9 billion hectares of land worldwide would be suitable for reforestation.',
+              image: reforestation
             },
             {
               title: 'Explore',

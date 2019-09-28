@@ -6,6 +6,7 @@ import { TestimonialsSection } from './../../components/TestimonialsSection';
 import { NewsletterSection } from './../../components/NewsletterSection';
 import { useRouter } from './../../util/router';
 import './styles.scss';
+import tree from '../../images/tree.png';
 
 export function HomePage(_props: unknown) {
   const router = useRouter();
@@ -15,10 +16,10 @@ export function HomePage(_props: unknown) {
       <HeroSection
         color="white"
         size="medium"
-        title="Your landing page title here"
+        title="Let's plant trees together"
         subtitle="This landing page is perfect for showing off your awesome product and driving people to sign up for a paid plan."
         buttonText="Get Started"
-        image="https://uploads.divjoy.com/undraw-japan_ubgk.svg"
+        image={tree}
         buttonOnClick={() => {
           router.push('/pricing');
         }}

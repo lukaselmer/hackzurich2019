@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class MyTreesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is my trees Fragment"
+        value = "The trees you have planted"
     }
     val text: LiveData<String> = _text
 }

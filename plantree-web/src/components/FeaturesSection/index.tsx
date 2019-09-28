@@ -4,6 +4,7 @@ import { SectionHeader } from './../SectionHeader';
 import { Features } from './../Features';
 import './styles.scss';
 import reforestation from '../../images/reforestation.jpg';
+import young_forest from '../../images/growing-forest.jpeg';
 
 type P = {
   color: string;
@@ -31,15 +32,15 @@ export function FeaturesSection(props: P) {
               image: reforestation
             },
             {
-              title: 'Explore',
+              title: 'Urgency',
               description:
-                'Integer ornare neque mauris, ac vulputate lacus venenatis et. Pellentesque ut ultrices purus.',
-              image: 'https://uploads.divjoy.com/undraw-personal_settings_kihd.svg'
+                'But we must act quickly, as new forests will take decades to mature and achieve their full potential as a source of natural carbon storage.',
+              image: young_forest
             },
             {
-              title: 'Explore',
+              title: 'Impact',
               description:
-                'Integer ornare neque mauris, ac vulputate lacus venenatis et. Pellentesque ut ultrices purus.',
+                'Planting billions of trees across the world is by far the biggest and cheapest way to tackle the climate crisis, according to scientists.',
               image: 'https://uploads.divjoy.com/undraw-having_fun_iais.svg'
             },
             {

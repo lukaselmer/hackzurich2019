@@ -3,6 +3,10 @@ import { Section } from './../Section';
 import { SectionHeader } from './../SectionHeader';
 import { Clients } from './../Clients';
 import './styles.scss';
+import eth from '../../images/eth.png';
+import greenpeace from '../../images/greenpeace.png';
+import allianz from '../../images/klimaallianz.jpg';
+import greens from '../../images/greens.jpg';
 
 type P = {
   color: string;
@@ -19,24 +23,24 @@ export function ClientsSection(props: P) {
         <Clients
           items={[
             {
-              name: 'Instagram',
-              image: 'https://uploads.divjoy.com/logo-instagram.svg',
+              name: 'ETH Zurich',
+              image: eth,
               width: '150px'
             },
             {
-              name: 'Slack',
-              image: 'https://uploads.divjoy.com/logo-slack.svg',
-              width: '135px'
+              name: 'Greenpeace',
+              image: greenpeace,
+              width: '200px'
             },
             {
-              name: 'Tinder',
-              image: 'https://uploads.divjoy.com/logo-tinder.svg',
-              width: '90px'
+              name: 'Klimaallianz Schweis',
+              image: allianz,
+              width: '160px'
             },
             {
               name: 'Spotify',
-              image: 'https://uploads.divjoy.com/logo-spotify.svg',
-              width: '135px'
+              image: greens,
+              width: '170px'
             }
           ]}
         />

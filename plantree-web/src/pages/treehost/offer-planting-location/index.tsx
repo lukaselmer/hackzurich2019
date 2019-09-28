@@ -6,12 +6,13 @@ import { GoogleMap, StandaloneSearchBox } from '@react-google-maps/api';
 
 interface S {
   center?: Coord;
+  treeLocation?: Coord;
 }
 
 export class OfferPlantingLocation extends Component<{}, S> {
   searchBox: { getPlaces: () => void } = null as any;
   // state: S = { center: undefined };
-  state: S = { center: { lat: 47.39015, lng: 8.515817 } }; // technopark - enable for debugging
+  state: S = { center: { lat: 47.39015, lng: 8.515817 }, treeLocation: undefined }; // technopark - enable for debugging
 
   render() {
     return (
@@ -80,12 +81,24 @@ export class OfferPlantingLocation extends Component<{}, S> {
         center={this.state.center}
         onClick={e => this.selectLocation(e)}
         clickableIcons={false}
-      />
+      >
+        {/* TODO: draw trees */}
+      </GoogleMap>
     );
   }
 
-  selectLocation(e: any): void {
-    console.log(e);
+  private selectLocation(e: { latLng: { lat: () => number; lng: () => number } }): void {
+    const treeLocation = this.extractLocation(e);
+    if (!treeLocation) return;
+    this.setState({ treeLocation });
+  }
+
+  private extractLocation(e: { latLng: { lat: () => number; lng: () => number } }) {
+    try {
+      return { lat: e.latLng.lat(), lng: e.latLng.lng() };
+    } catch {
+      return null;
+    }
   }
 }
 

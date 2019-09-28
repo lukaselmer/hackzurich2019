@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useEffect } from 'react';
 import './styles.scss';
 import { Content, Box, Notification, Input, Column, Button } from 'bloomer';
 import { Container } from 'bloomer/lib/layout/Container';
@@ -10,6 +10,9 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { Unpacked } from '../../../util/ts-utils';
 import { Checkbox } from 'bloomer/lib/elements/Form/Checkbox';
 import { Breadcrumbs } from '../../../components/Breadcrumbs';
+import { firebasePaths } from '../../../util/firebase';
+import { FirestoreMutation } from '@react-firebase/firestore';
+import { useRouter } from '../../../util/router';
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 const timesOfDay = ['Morning (9am-12am)', 'Afternoon (1pm-5pm)', 'Evening (5pm-8pm)'] as const;
@@ -35,22 +38,22 @@ const trees: Tree[] = [
 
 export class OfferPlantingLocation extends Component<{}, S> {
   searchBox: { getPlaces: () => void } = null as any;
-  state: S = {
-    center: undefined,
-    treeLocation: undefined,
-    trees: new Set(),
-    numTrees: 0,
-    dates: { weekday: new Set(), time: new Set() },
-    agreed: false
-  };
   // state: S = {
-  //   center: { lat: 47.39015, lng: 8.515817 },
-  //   treeLocation: { lat: 47.39015, lng: 8.51617 },
-  //   numTrees: 10,
-  //   trees: new Set(trees),
-  //   dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
+  //   center: undefined,
+  //   treeLocation: undefined,
+  //   trees: new Set(),
+  //   numTrees: 0,
+  //   dates: { weekday: new Set(), time: new Set() },
   //   agreed: false
   // };
+  state: S = {
+    center: { lat: 47.39015, lng: 8.515817 },
+    treeLocation: { lat: 47.39015, lng: 8.51617 },
+    numTrees: 10,
+    trees: new Set(trees),
+    dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
+    agreed: true
+  };
 
   render() {
     return (
@@ -310,7 +313,10 @@ export class OfferPlantingLocation extends Component<{}, S> {
               </p>
 
               <p>
-                <Checkbox onClick={() => this.setState({ agreed: !this.state.agreed })}>
+                <Checkbox
+                  checked={this.state.agreed}
+                  onClick={() => this.setState({ agreed: !this.state.agreed })}
+                >
                   {' '}
                   I hereby confirm that I am authorized to allow planting trees as specified above in
                   this location.
@@ -318,9 +324,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
               </p>
             </Notification>
 
-            <Button isColor="primary" disabled={!this.state.agreed}>
-              Provide location to plant tree{this.state.numTrees > 1 ? 's' : ''}
-            </Button>
+            {this.storePlantingLocationButton()}
           </Column>
           <Column>
             <GoogleMap
@@ -346,6 +350,35 @@ export class OfferPlantingLocation extends Component<{}, S> {
           </Column>
         </Columns>
       </>
+    );
+  }
+
+  private storePlantingLocationButton() {
+    return (
+      <FirestoreMutation path={firebasePaths.plantingLocations} type="add">
+        {({ runMutation }) => (
+          <Button
+            isColor="primary"
+            disabled={!this.state.agreed}
+            // data-testid="add-document"
+            onClick={async () => {
+              const { dates, numTrees, treeLocation, trees } = this.state;
+              const plantingLocation = {
+                dates: { time: [...dates.time.values()], weekday: [...dates.weekday.values()] },
+                numTrees,
+                treeLocation,
+                trees: [...trees.values()]
+              };
+              const { key } = await runMutation(plantingLocation);
+              if (key === null || typeof key === 'undefined') return;
+              const router = useRouter();
+              useEffect(() => router.push('/treehost'), [router]);
+            }}
+          >
+            Provide location to plant tree{this.state.numTrees > 1 ? 's' : ''}
+          </Button>
+        )}
+      </FirestoreMutation>
     );
   }
 }

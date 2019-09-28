@@ -16,27 +16,13 @@ React, HTML, SCSS, Bulma, TypeScript, Firebase, Google Maps API, Places API
 
 ### Start the app
 
-1. Install VS code: https://code.visualstudio.com/download
-
-2. Install Node: https://nodejs.org/en/download/
-
-3. Install yarn: https://yarnpkg.com/lang/en/docs/install/#mac-stable
-
-4. Clone the repository: 
-
-`git clone git@github.com:lukaselmer/hackzurich2019.git`
-
-5. Navigate into the web app:
-
-`cd plantree-web`
-
-Install dependencies:
-
-`yarn install`
-
-Start development server:
-
-`yarn start` 
+* Install VS code: https://code.visualstudio.com/download
+* Install Node: https://nodejs.org/en/download/
+* Install yarn: https://yarnpkg.com/lang/en/docs/install/#mac-stable
+* Clone the repository:  `git clone git@github.com:lukaselmer/hackzurich2019.git`
+* Navigate into the web app: `cd plantree-web`
+* Install dependencies: `yarn install`
+* Start development server: `yarn start` 
 
 ## Mobile Application
 
@@ -50,17 +36,9 @@ Android, Kotlin, Google Maps API, Places API
 
 ### Start the app
 
-1. Install Android Studio: https://developer.android.com/studio?gclid=CjwKCAjwibzsBRAMEiwA1pHZrp34wDyFiH1_a20ba8fvMT52HoAwfa02DooVG8MMEd4I38mfepVnIRoC9tEQAvD_BwE
-
-2. Clone the repository: 
-
-`git clone git@github.com:lukaselmer/hackzurich2019.git`
-
-3. Navigate into the mobile app:
-
-`cd mobile`
-
-4. Open Android Studio and run the project
-
-5. Run the project on a hardware device
+* Install Android Studio: https://developer.android.com/studio?gclid=CjwKCAjwibzsBRAMEiwA1pHZrp34wDyFiH1_a20ba8fvMT52HoAwfa02DooVG8MMEd4I38mfepVnIRoC9tEQAvD_BwE
+* Clone the repository: `git clone git@github.com:lukaselmer/hackzurich2019.git`
+* Navigate into the mobile app: `cd mobile`
+* Open Android Studio and run the project
+* Run the project on a hardware device
 

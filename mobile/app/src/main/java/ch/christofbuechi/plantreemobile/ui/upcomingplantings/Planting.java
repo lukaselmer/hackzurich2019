@@ -1,13 +1,8 @@
 package ch.christofbuechi.plantreemobile.ui.upcomingplantings;
 
-import android.content.Context;
-
-import org.joda.time.DateTime;
-import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,7 +24,7 @@ public class Planting {
     // This method creates an ArrayList that has three Pantings objects
 // Checkout the project associated with this tutorial on Github if
 // you want to use the same images.
-    public static List<Planting> initializeData(Context context){
+    public static List<Planting> initializeData(){
         List<Planting> plantings = new ArrayList<>();
 
         DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");

@@ -40,7 +40,7 @@ class UpcomingPlantingsFragment : Fragment() {
 
         viewManager = LinearLayoutManager(context)
 
-        var plantings = Planting.initializeData(context)
+        var plantings = Planting.initializeData()
         viewAdapter = UpcomingPlantingsAdapter(plantings)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.upcoming_recyclerview).apply {

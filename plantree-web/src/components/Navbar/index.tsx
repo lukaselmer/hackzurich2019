@@ -20,7 +20,7 @@ export function Navbar(props: P) {
         <div className="navbar-brand">
           <div className="navbar-item">
             <Link to="/">
-              <img className="image" src={props.logo} alt="Logo" />
+              <img className="image" style={{ maxHeight: '45px' }} src={props.logo} alt="Logo" />
             </Link>
           </div>
           <div

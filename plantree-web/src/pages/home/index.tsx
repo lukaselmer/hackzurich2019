@@ -16,8 +16,8 @@ export function HomePage(_props: unknown) {
       <HeroSection
         color="white"
         size="medium"
-        title="Let's plant trees together"
-        subtitle="This landing page is perfect for showing off your awesome product and driving people to sign up for a paid plan."
+        title="Let's plant trees for a carbon neutral future"
+        subtitle="Planting trees is the cheapest and most effective way to fight the climate crisis. Let's stand together and contribute to a better future for the next generations."
         buttonText="Get Started"
         image={tree}
         buttonOnClick={() => {

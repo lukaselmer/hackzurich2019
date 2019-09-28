@@ -31,12 +31,7 @@ export function HomePage(_props: unknown) {
         title="Features"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
       />
-      <TestimonialsSection
-        color="light"
-        size="medium"
-        title="Here's what people are saying"
-        subtitle=""
-      />
+      <TestimonialsSection color="light" size="medium" title="Team" subtitle="" />
       <NewsletterSection
         color="white"
         size="medium"

@@ -3,6 +3,9 @@ import { Section } from './../Section';
 import { SectionHeader } from './../SectionHeader';
 import { Testimonials } from './../Testimonials';
 import './styles.scss';
+import christof from '../../images/christof.jpeg';
+import marion from '../../images/marion.jpeg';
+import lukas from '../../images/lukas.jpeg';
 
 type P = {
   color?: string;
@@ -19,27 +22,25 @@ export function TestimonialsSection(props: P) {
         <Testimonials
           items={[
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-5.jpeg',
-              name: 'Sarah Kline',
+              avatar: christof,
+              name: 'Christof Buechi',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
-              company: 'Company'
+                "I'm a passionate software developer and love to learn new things. Climate change is affecting us all and it's high time to come up with solutions.",
+              company: 'Head of Environmantal Matters'
             },
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-48.jpeg',
-              name: 'Shawna Murray',
-              role: 'Software Engineer',
+              avatar: marion,
+              name: 'Marion Schleifer',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam!',
-              company: 'Company'
+                "I'm a Developer Experience Engineer and love the community. I'm worried about my carbon footprint and want to do something to compensate for it.",
+              company: 'Chief of Tree Happiness'
             },
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-12.jpeg',
-              name: 'Blake Elder',
-              role: 'Designer',
+              avatar: lukas,
+              name: 'Lukas Elmer',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae.',
-              company: 'Company'
+                "I'm a software engineer and like participating in hackatons. I'm concerned about carbon emissions and want to find ways to neutralize them.",
+              company: 'Head of Innovation'
             }
           ]}
         />

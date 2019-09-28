@@ -5,6 +5,8 @@ import { Features } from './../Features';
 import './styles.scss';
 import reforestation from '../../images/reforestation.jpg';
 import young_forest from '../../images/growing-forest.jpeg';
+import impact from '../../images/impact.jpg';
+import solidarity from '../../images/solidarity.jpeg';
 
 type P = {
   color: string;
@@ -41,13 +43,13 @@ export function FeaturesSection(props: P) {
               title: 'Impact',
               description:
                 'Planting billions of trees across the world is by far the biggest and cheapest way to tackle the climate crisis, according to scientists.',
-              image: 'https://uploads.divjoy.com/undraw-having_fun_iais.svg'
+              image: impact
             },
             {
-              title: 'Explore',
+              title: 'Solidarity',
               description:
-                'Integer ornare neque mauris, ac vulputate lacus venenatis et. Pellentesque ut ultrices purus.',
-              image: 'https://uploads.divjoy.com/undraw-balloons_vxx5.svg'
+                "Everyone can help regardless of background or financial status. If we stand together, the sky's the limit.",
+              image: solidarity
             }
           ]}
         />

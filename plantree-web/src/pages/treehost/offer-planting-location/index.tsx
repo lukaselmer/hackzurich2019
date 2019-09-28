@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './styles.scss';
-import { Content, Box, Notification, Input, Column, Button } from 'bloomer';
+import { Content, Box, Notification, Input, Column, Button, Breadcrumb, BreadcrumbItem } from 'bloomer';
 import { Container } from 'bloomer/lib/layout/Container';
 import { GoogleMap, StandaloneSearchBox, Marker } from '@react-google-maps/api';
 import tree from '../../../images/tree.svg';
@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { Unpacked } from '../../../util/ts-utils';
 import { Checkbox } from 'bloomer/lib/elements/Form/Checkbox';
+import { Link } from 'react-router-dom';
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 const timesOfDay = ['Morning (9am-12am)', 'Afternoon (1pm-5pm)', 'Evening (5pm-8pm)'] as const;
@@ -54,7 +55,20 @@ export class OfferPlantingLocation extends Component<{}, S> {
   render() {
     return (
       <Container>
-        <Content style={{ paddingBottom: '20px' }}>
+        <Breadcrumb>
+          <ul>
+            <BreadcrumbItem>
+              <Link to="/">Home</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <Link to="/treehost">Treehost</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem isActive>
+              <a>Offer Planting Location</a>
+            </BreadcrumbItem>
+          </ul>
+        </Breadcrumb>
+        <Content style={{ paddingBottom: '20px', paddingTop: '20px', minHeight: '400px' }}>
           <h1>Offer Planting Location</h1>
           <Box>
             <h4>Approximate Address</h4>

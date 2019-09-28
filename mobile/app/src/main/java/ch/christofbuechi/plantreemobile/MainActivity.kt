@@ -13,6 +13,14 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.content.Intent
+import android.net.Uri.fromParts
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.net.Uri
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,8 +34,15 @@ class MainActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+
+            val emailIntent = Intent(
+                Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto", "getitdone@climatechange.org", null
+                )
+            )
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "My idea how to make it better")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "insert your text here")
+            startActivity(Intent.createChooser(emailIntent, "Send email..."))
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)

@@ -34,6 +34,6 @@
         tools:layout="@layout/fragment_share" />
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="ch.christofbuechi.plantreemobile.ui.tools.MapsFragment"
+        android:name="ch.christofbuechi.plantreemobile.ui.treehost.mapFragment.MapsFragment"
         android:label="MapsFragment" />
 </navigation>

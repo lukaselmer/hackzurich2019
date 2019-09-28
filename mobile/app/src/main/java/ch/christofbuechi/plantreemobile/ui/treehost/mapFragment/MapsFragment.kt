@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.tools
+package ch.christofbuechi.plantreemobile.ui.treehost.mapFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ch.christofbuechi.plantreemobile.R
+import ch.christofbuechi.plantreemobile.ui.tools.MapsViewModel
 
 class MapsFragment : Fragment() {
 

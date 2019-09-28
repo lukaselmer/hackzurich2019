@@ -35,26 +35,60 @@ function Navbar(props: P) {
         <div className={'navbar-menu' + (menuOpen ? ' is-active' : '')}>
           <div className="navbar-end">
             {auth.user && (
-              <div className="navbar-item has-dropdown is-hoverable">
-                <Link className="navbar-link" to="/">
-                  Account
-                </Link>
-                <div className="navbar-dropdown is-boxed">
-                  <Link className="navbar-item" to="/dashboard">
-                    Dashboard
+              <>
+                <div className="navbar-item has-dropdown is-hoverable">
+                  <Link className="navbar-link" to="/">
+                    Planter
                   </Link>
-                  <Link
-                    className="navbar-item"
-                    to="/signout"
-                    onClick={e => {
-                      e.preventDefault();
-                      auth.signout();
-                    }}
-                  >
-                    Sign out
-                  </Link>
+                  <div className="navbar-dropdown is-boxed">
+                    <Link className="navbar-item" to="/faq">
+                      How to plant a tree?
+                    </Link>
+                    <Link className="navbar-item" to="/planter/find-planting-locations">
+                      Find planting locations
+                    </Link>
+                    <Link className="navbar-item" to="/planter/my-upcoming-plantings">
+                      My upcoming plantings
+                    </Link>
+                    <Link className="navbar-item" to="/planter/my-trees">
+                      My trees
+                    </Link>
+                  </div>
                 </div>
-              </div>
+                <div className="navbar-item has-dropdown is-hoverable">
+                  <Link className="navbar-link" to="/">
+                    Treehost
+                  </Link>
+                  <div className="navbar-dropdown is-boxed">
+                    <Link className="navbar-item" to="/treehost/my-tree-locations">
+                      My tree locations
+                    </Link>
+                    <Link className="navbar-item" to="/treehost/offer-planting-location">
+                      Offer planting location
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-item has-dropdown is-hoverable">
+                  <Link className="navbar-link" to="/">
+                    Account
+                  </Link>
+                  <div className="navbar-dropdown is-boxed">
+                    <Link className="navbar-item" to="/dashboard">
+                      Dashboard
+                    </Link>
+                    <Link
+                      className="navbar-item"
+                      to="/signout"
+                      onClick={e => {
+                        e.preventDefault();
+                        auth.signout();
+                      }}
+                    >
+                      Sign out
+                    </Link>
+                  </div>
+                </div>
+              </>
             )}
 
             {!auth.user && (

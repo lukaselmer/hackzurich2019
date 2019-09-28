@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.christofbuechi.plantreemobile.R
 
+
 class FindTreehostFragment : Fragment() {
 
     private lateinit var findTreehostViewModel: FindTreehostViewModel
@@ -38,7 +39,9 @@ class FindTreehostFragment : Fragment() {
         })
 
         viewManager = LinearLayoutManager(context)
-        viewAdapter = MyAdapter();
+
+        var persons = Person.initializeData()
+        viewAdapter = MyAdapter(persons)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes

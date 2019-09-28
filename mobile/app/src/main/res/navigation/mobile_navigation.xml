@@ -21,11 +21,19 @@
         android:id="@+id/nav_findtreehost"
         android:name="ch.christofbuechi.plantreemobile.ui.treehost.FindTreehostFragment"
         android:label="@string/menu_findTreehost"
-        tools:layout="@layout/fragment_find_treehost" />
+        tools:layout="@layout/fragment_find_treehost" >
+        <action
+            android:id="@+id/action_nav_findtreehost_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_share"
         android:name="ch.christofbuechi.plantreemobile.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="ch.christofbuechi.plantreemobile.ui.tools.MapsFragment"
+        android:label="MapsFragment" />
 </navigation>

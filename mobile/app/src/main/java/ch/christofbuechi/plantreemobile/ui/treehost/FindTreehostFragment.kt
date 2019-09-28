@@ -40,7 +40,7 @@ class FindTreehostFragment : Fragment() {
 
         viewManager = LinearLayoutManager(context)
 
-        var persons = Person.initializeData(context)
+        var persons = Person.initializeData()
         viewAdapter = TreeHostAdapter(persons)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.my_recycler_view).apply {

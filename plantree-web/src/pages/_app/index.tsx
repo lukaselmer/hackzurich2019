@@ -37,42 +37,48 @@ export function App(_props: any) {
         <Router>
           <>
             <Navbar color="white" spaced={false} logo={logo} />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/faq" component={FaqPage} />
-              <Route exact path="/pricing" component={PricingPage} />
-              <Route exact path="/contact" component={ContactPage} />
-              <Route exact path="/dashboard" component={DashboardPage} />
-              <Route exact path="/signin" component={SigninPage} />
-              <Route exact path="/signup" component={SignupPage} />
-              <Route exact path="/forgotpass" component={ForgotpassPage} />
-              <Route exact path="/changepass" component={ChangepassPage} />
+            <div style={{ paddingTop: '20px' }}>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/faq" component={FaqPage} />
+                <Route exact path="/pricing" component={PricingPage} />
+                <Route exact path="/contact" component={ContactPage} />
+                <Route exact path="/dashboard" component={DashboardPage} />
+                <Route exact path="/signin" component={SigninPage} />
+                <Route exact path="/signup" component={SignupPage} />
+                <Route exact path="/forgotpass" component={ForgotpassPage} />
+                <Route exact path="/changepass" component={ChangepassPage} />
 
-              <Route exact path="/planter/find-planting-locations" component={FindPlantingLocations} />
-              <Route exact path="/planter/my-upcoming-plantings" component={MyUpcompingPlantings} />
-              <Route exact path="/planter/my-trees" component={MyTrees} />
+                <Route exact path="/planter/find-planting-locations" component={FindPlantingLocations} />
+                <Route exact path="/planter/my-upcoming-plantings" component={MyUpcompingPlantings} />
+                <Route exact path="/planter/my-trees" component={MyTrees} />
 
-              <Route exact path="/treehost" component={Treehost} />
-              <Route exact path="/treehost/my-tree-locations" component={MyTreeLocations} />
-              <Route exact path="/treehost/offer-planting-location" component={OfferPlantingLocation} />
+                <Route exact path="/treehost" component={Treehost} />
+                <Route exact path="/treehost/my-tree-locations" component={MyTreeLocations} />
+                <Route
+                  exact
+                  path="/treehost/offer-planting-location"
+                  component={OfferPlantingLocation}
+                />
 
-              <Route
-                component={({ location }: RouteProps) => {
-                  return (
-                    <div
-                      style={{
-                        padding: '50px',
-                        width: '100%',
-                        textAlign: 'center'
-                      }}
-                    >
-                      The page <code>{location && location.pathname}</code> could not be found.
-                    </div>
-                  );
-                }}
-              />
-            </Switch>
+                <Route
+                  component={({ location }: RouteProps) => {
+                    return (
+                      <div
+                        style={{
+                          padding: '50px',
+                          width: '100%',
+                          textAlign: 'center'
+                        }}
+                      >
+                        The page <code>{location && location.pathname}</code> could not be found.
+                      </div>
+                    );
+                  }}
+                />
+              </Switch>
+            </div>
 
             <Footer color="light" size="normal" logo={logo} copyright="© 2019 PLANTree" />
           </>

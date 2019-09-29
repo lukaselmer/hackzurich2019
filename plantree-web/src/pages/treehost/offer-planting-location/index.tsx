@@ -1,24 +1,26 @@
-import React, { Component, Fragment, useEffect } from 'react';
+import React, { Component, Fragment } from 'react';
 import './styles.scss';
 import { Content, Box, Notification, Input, Column, Button } from 'bloomer';
 import { Container } from 'bloomer/lib/layout/Container';
 import { GoogleMap, StandaloneSearchBox, Marker } from '@react-google-maps/api';
-import tree from '../../../images/tree.svg';
+import treeIcon from '../../../images/tree.svg';
 import { Columns } from 'bloomer/lib/grid/Columns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { Unpacked } from '../../../util/ts-utils';
 import { Checkbox } from 'bloomer/lib/elements/Form/Checkbox';
 import { Breadcrumbs } from '../../../components/Breadcrumbs';
-import { firebasePaths } from '../../../util/firebase';
+import {
+  firebasePaths,
+  Weekday,
+  TimeOfDay,
+  weekdays,
+  timesOfDay,
+  Coord,
+  Tree
+} from '../../../util/firebase';
 import { FirestoreMutation } from '@react-firebase/firestore';
-import { useRouter } from '../../../util/router';
-
-const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
-const timesOfDay = ['Morning (9am-12am)', 'Afternoon (1pm-5pm)', 'Evening (5pm-8pm)'] as const;
-
-type Weekday = Unpacked<typeof weekdays>;
-type TimeOfDay = Unpacked<typeof timesOfDay>;
+import { history } from '../../../util/router';
+import firebase from 'firebase/app';
 
 interface S {
   center?: Coord;
@@ -38,22 +40,22 @@ const trees: Tree[] = [
 
 export class OfferPlantingLocation extends Component<{}, S> {
   searchBox: { getPlaces: () => void } = null as any;
+  state: S = {
+    center: undefined,
+    treeLocation: undefined,
+    trees: new Set(),
+    numTrees: 0,
+    dates: { weekday: new Set(), time: new Set() },
+    agreed: false
+  };
   // state: S = {
-  //   center: undefined,
-  //   treeLocation: undefined,
-  //   trees: new Set(),
-  //   numTrees: 0,
-  //   dates: { weekday: new Set(), time: new Set() },
+  //   center: { lat: 47.39015, lng: 8.515817 },
+  //   treeLocation: { lat: 47.39015, lng: 8.51617 },
+  //   numTrees: 10,
+  //   trees: new Set(trees),
+  //   dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
   //   agreed: false
   // };
-  state: S = {
-    center: { lat: 47.39015, lng: 8.515817 },
-    treeLocation: { lat: 47.39015, lng: 8.51617 },
-    numTrees: 10,
-    trees: new Set(trees),
-    dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
-    agreed: true
-  };
 
   render() {
     return (
@@ -128,7 +130,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
           <Marker
             position={this.state.treeLocation}
             icon={{
-              url: tree,
+              url: treeIcon,
               scaledSize: { height: 70, width: 70 } as any
             }}
           />
@@ -315,7 +317,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
               <p>
                 <Checkbox
                   checked={this.state.agreed}
-                  onClick={() => this.setState({ agreed: !this.state.agreed })}
+                  onChange={() => this.setState({ agreed: !this.state.agreed })}
                 >
                   {' '}
                   I hereby confirm that I am authorized to allow planting trees as specified above in
@@ -341,7 +343,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
                 <Marker
                   position={this.state.treeLocation}
                   icon={{
-                    url: tree,
+                    url: treeIcon,
                     scaledSize: { height: 70, width: 70 } as any
                   }}
                 />
@@ -355,24 +357,27 @@ export class OfferPlantingLocation extends Component<{}, S> {
 
   private storePlantingLocationButton() {
     return (
-      <FirestoreMutation path={firebasePaths.plantingLocations} type="add">
+      <FirestoreMutation key={`${this.state.agreed}`} path={firebasePaths.plantingLocations} type="add">
         {({ runMutation }) => (
           <Button
             isColor="primary"
             disabled={!this.state.agreed}
             // data-testid="add-document"
             onClick={async () => {
-              const { dates, numTrees, treeLocation, trees } = this.state;
+              const { dates, numTrees, treeLocation } = this.state;
               const plantingLocation = {
-                dates: { time: [...dates.time.values()], weekday: [...dates.weekday.values()] },
+                dates: {
+                  time: timesOfDay.filter(time => dates.time.has(time)),
+                  weekday: weekdays.filter(weekday => dates.weekday.has(weekday))
+                },
                 numTrees,
                 treeLocation,
-                trees: [...trees.values()]
+                trees: trees.filter(tree => this.state.trees.has(tree)),
+                nowOnServer: firebase.firestore.FieldValue.serverTimestamp()
               };
               const { key } = await runMutation(plantingLocation);
               if (key === null || typeof key === 'undefined') return;
-              const router = useRouter();
-              useEffect(() => router.push('/treehost'), [router]);
+              history.push('/treehost');
             }}
           >
             Provide location to plant tree{this.state.numTrees > 1 ? 's' : ''}
@@ -385,14 +390,4 @@ export class OfferPlantingLocation extends Component<{}, S> {
 
 interface Place {
   geometry: { location: { lat: () => number; lng: () => number } };
-}
-
-interface Coord {
-  lat: number;
-  lng: number;
-}
-
-interface Tree {
-  name: string;
-  desc: string;
 }

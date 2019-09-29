@@ -26,7 +26,7 @@ export function TestimonialsSection(props: P) {
               name: 'Christof Buechi',
               bio:
                 "I'm a passionate software developer and love to learn new things. Climate change is affecting us all and it's high time to come up with solutions.",
-              company: 'Head of Environmantal Matters'
+              company: 'Head of Environmental Matters'
             },
             {
               avatar: marion,
@@ -40,7 +40,7 @@ export function TestimonialsSection(props: P) {
               name: 'Lukas Elmer',
               bio:
                 "I'm a software engineer and like participating in hackatons. I'm concerned about carbon emissions and want to find ways to neutralize them.",
-              company: 'Head of Innovation'
+              company: 'Head of CO2 Reduction'
             }
           ]}
         />

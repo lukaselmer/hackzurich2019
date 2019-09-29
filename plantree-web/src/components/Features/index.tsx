@@ -19,7 +19,7 @@ export function Features(props: P) {
           </div>
           <div className="column">
             <figure className="Features__image image">
-              <img src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.title} style={{ borderRadius: '10px' }} />
             </figure>
           </div>
         </div>

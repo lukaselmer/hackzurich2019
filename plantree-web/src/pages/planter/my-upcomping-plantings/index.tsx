@@ -13,7 +13,7 @@ export function MyUpcompingPlantings(_props: unknown) {
       </Container>
       <ContentSection
         color="primary"
-        size="large"
+        size="medium"
         title="My upcoming plantings"
         subtitle="Please check your mobile app to find your upcoming plantings."
       />

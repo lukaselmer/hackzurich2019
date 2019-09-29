@@ -8,7 +8,7 @@ export function AboutPage(_props: unknown) {
     <>
       <ContentSection
         color="primary"
-        size="large"
+        size="medium"
         title="We help you make money"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam!"
       />

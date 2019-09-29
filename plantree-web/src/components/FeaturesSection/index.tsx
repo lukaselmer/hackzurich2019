@@ -7,6 +7,7 @@ import reforestation from '../../images/reforestation.jpg';
 import young_forest from '../../images/growing-forest.jpeg';
 import impact from '../../images/impact.jpg';
 import solidarity from '../../images/solidarity.jpeg';
+import { ContentSection } from '../ContentSection';
 
 type P = {
   color: string;
@@ -19,12 +20,12 @@ export function FeaturesSection(props: P) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
-        <SectionHeader
-          title="Call for action"
+        {/* <SectionHeader
+          title="Call to action"
           subtitle="We need to stand together to fight climate change. There is a lot at stake for humanity, animals and nature."
           centered={true}
           size={3}
-        />
+        /> */}
         <Features
           items={[
             {

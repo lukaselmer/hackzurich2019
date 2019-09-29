@@ -12,7 +12,7 @@ export function FindPlantingLocations(_props: unknown) {
       </Container>
       <ContentSection
         color="primary"
-        size="large"
+        size="medium"
         title="Find planting locations"
         subtitle="Please check your mobile app to find planting locations."
       />

@@ -13,7 +13,7 @@ export function MyTrees(_props: unknown) {
       </Container>
       <ContentSection
         color="primary"
-        size="large"
+        size="medium"
         title="My trees"
         subtitle="Please check your mobile app to see all the trees you have planted, and the CO2 you have reduced."
       />

@@ -30,6 +30,8 @@ import profileImg1 from '../../../images/rambo.jpeg';
 import profileImg2 from '../../../images/marion.jpeg';
 import profileImg3 from '../../../images/lukas.jpeg';
 import profileImg4 from '../../../images/christof.jpeg';
+import { faHeart, faRetweet, faReply } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function MyTreeLocations(_props: unknown) {
   return (
@@ -148,22 +150,13 @@ function renderPlanters(plantingLocation: PlantingLocation) {
                 {person.numTrees === 1 ? '' : 's'} on {person.date}.
               </p>
             </Content>
-            <Level isMobile>
+            <Level>
               <LevelLeft>
-                <LevelItem href="#">
-                  <Icon isSize="small">
-                    <span className="fa fa-reply" aria-hidden="true" />
-                  </Icon>
+                <LevelItem href="#" hasTextColor="primary">
+                  <FontAwesomeIcon icon={faReply}></FontAwesomeIcon>
                 </LevelItem>
-                <LevelItem href="#">
-                  <Icon isSize="small">
-                    <span className="fa fa-retweet" aria-hidden="true" />
-                  </Icon>
-                </LevelItem>
-                <LevelItem href="#">
-                  <Icon isSize="small">
-                    <span className="fa fa-heart" aria-hidden="true" />
-                  </Icon>
+                <LevelItem href="#" hasTextColor="primary">
+                  <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
                 </LevelItem>
               </LevelLeft>
             </Level>

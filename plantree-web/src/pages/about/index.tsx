@@ -9,8 +9,8 @@ export function AboutPage(_props: unknown) {
       <ContentSection
         color="primary"
         size="medium"
-        title="We help you make money"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam!"
+        title="How we are organized"
+        subtitle="Created at HackZurich 2019, PLANTree has been a huge success. We managed to plant 320 billion trees already, and we are planning to planting many more. Help us grow, and let's fight climate change together."
       />
       <TeamBiosSection color="white" size="medium" title="Meet the Team" subtitle="" />
     </>

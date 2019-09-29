@@ -3,6 +3,8 @@ import { Section } from './../Section';
 import { Link } from './../../util/router';
 import './styles.scss';
 import logo from '../../images/tree.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 type P = {
   color: string;
@@ -27,19 +29,13 @@ export function Footer(props: P) {
         </div>
         <div className="social right">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <span className="icon">
-              <i className="fab fa-twitter" />
-            </span>
+            <FontAwesomeIcon icon={faTwitter} size="3x"></FontAwesomeIcon>
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <span className="icon">
-              <i className="fab fa-facebook-f" />
-            </span>
+            <FontAwesomeIcon icon={faFacebookF} size="3x"></FontAwesomeIcon>
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <span className="icon">
-              <i className="fab fa-instagram" />
-            </span>
+            <FontAwesomeIcon icon={faInstagram} size="3x"></FontAwesomeIcon>
           </a>
         </div>
         <div className="copyright left">{props.copyright}</div>

@@ -3,6 +3,9 @@ import { Section } from './../Section';
 import { SectionHeader } from './../SectionHeader';
 import { TeamBios } from './../TeamBios';
 import './styles.scss';
+import christof from '../../images/christof.jpeg';
+import marion from '../../images/marion.jpeg';
+import lukas from '../../images/lukas.jpeg';
 
 type P = {
   color?: string;
@@ -19,34 +22,25 @@ export function TeamBiosSection(props: P) {
         <TeamBios
           people={[
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-68.jpeg',
-              name: 'John Smith',
-              role: 'Software Engineer',
+              avatar: christof,
+              name: 'Christof Buechi',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo.',
-              twitterUrl: 'https://twitter.com',
-              facebookUrl: 'https://facebook.com',
-              linkedinUrl: 'https://linkedin.com'
+                "I'm a passionate software developer and love to learn new things. Climate change is affecting us all and it's high time to come up with solutions.",
+              role: 'Head of Environmental Matters'
             },
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-35.jpeg',
-              name: 'Lisa Zinn',
-              role: 'Software Engineer',
+              avatar: marion,
+              name: 'Marion Schleifer',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam! Labore reprehenderit beatae magnam animi!',
-              twitterUrl: 'https://twitter.com',
-              facebookUrl: 'https://facebook.com',
-              linkedinUrl: 'https://linkedin.com'
+                "I'm a Developer Experience Engineer and love the community. I'm worried about my carbon footprint and want to do something to compensate for it.",
+              role: 'Chief of Tree Happiness'
             },
             {
-              avatar: 'https://uploads.divjoy.com/pravatar-150x-16.jpeg',
-              name: 'Diana Low',
-              role: 'Designer',
+              avatar: lukas,
+              name: 'Lukas Elmer',
               bio:
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam! Labore reprehenderit beatae magnam animi!',
-              twitterUrl: 'https://twitter.com',
-              facebookUrl: 'https://facebook.com',
-              linkedinUrl: 'https://linkedin.com'
+                "I'm a software engineer and like participating in hackatons. I'm concerned about carbon emissions and want to find ways to neutralize them.",
+              role: 'Head of CO2 Reduction'
             }
           ]}
         />

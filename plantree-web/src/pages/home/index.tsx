@@ -7,9 +7,12 @@ import { NewsletterSection } from './../../components/NewsletterSection';
 import { useRouter } from './../../util/router';
 import './styles.scss';
 import tree from '../../images/tree.png';
+import { useAuth } from '../../util/auth';
 
 export function HomePage(_props: unknown) {
   const router = useRouter();
+  const auth = useAuth();
+  const user = auth.user;
 
   return (
     <>
@@ -21,7 +24,8 @@ export function HomePage(_props: unknown) {
         buttonText="Get Started"
         image={tree}
         buttonOnClick={() => {
-          router.push('/pricing');
+          if (user) router.push('/faq');
+          else router.push('/signup');
         }}
       />
       <ClientsSection color="light" size="normal" title="" subtitle="" />

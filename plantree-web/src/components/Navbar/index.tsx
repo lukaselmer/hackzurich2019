@@ -3,6 +3,7 @@ import { NavbarContainer } from './../NavbarContainer';
 import { Link } from './../../util/router';
 import { useAuth } from './../../util/auth';
 import './styles.scss';
+import Gravatar from 'react-gravatar';
 
 type P = {
   spaced: boolean;
@@ -13,6 +14,9 @@ type P = {
 export function Navbar(props: P) {
   const auth = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const user = auth.user;
+  const email = (user && user.email) || '';
 
   return (
     <NavbarContainer spaced={props.spaced} color={props.color}>
@@ -37,7 +41,7 @@ export function Navbar(props: P) {
             {auth.user && (
               <>
                 <div className="navbar-item has-dropdown is-hoverable">
-                  <Link className="navbar-link" to="/">
+                  <Link className="navbar-link" to="/faq">
                     Planter
                   </Link>
                   <div className="navbar-dropdown is-boxed">
@@ -76,11 +80,11 @@ export function Navbar(props: P) {
                 </div> */}
                 <div className="navbar-item has-dropdown is-hoverable">
                   <Link className="navbar-link" to="/">
-                    Account
+                    <Gravatar email={email} style={{ maxHeight: '50px', borderRadius: '100%' }} />
                   </Link>
                   <div className="navbar-dropdown is-boxed">
-                    <Link className="navbar-item" to="/dashboard">
-                      Dashboard
+                    <Link to="#" className="navbar-item">
+                      {email}
                     </Link>
                     <Link
                       className="navbar-item"
@@ -98,9 +102,14 @@ export function Navbar(props: P) {
             )}
 
             {!auth.user && (
-              <Link className="navbar-item" to="/signin">
-                Sign in
-              </Link>
+              <>
+                <Link className="navbar-item" to="/signin">
+                  Sign in
+                </Link>
+                <Link className="navbar-item" to="/signup">
+                  Register account
+                </Link>
+              </>
             )}
           </div>
         </div>

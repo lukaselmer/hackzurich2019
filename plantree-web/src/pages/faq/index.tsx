@@ -8,7 +8,7 @@ export function FaqPage(_props: unknown) {
   return (
     <>
       <Container>
-        <Breadcrumbs items={[['Home', '/'], ['Planter', '/planter'], ['How to plant a tree?', '']]} />
+        <Breadcrumbs items={[['Home', '/'], ['Planter', '/'], ['How to plant a tree?', '']]} />
       </Container>
       <FaqSection color="white" size="medium" title="How to plant a tree?" subtitle="" />
     </>

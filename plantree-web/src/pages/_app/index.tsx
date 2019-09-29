@@ -89,7 +89,7 @@ export function App(_props: any) {
                 </Switch>
               </div>
 
-              <Footer color="light" size="normal" logo={logo} copyright="© 2019 PLANTree" />
+              <Footer color="light" size="normal" copyright="© 2019 PLANTree" />
             </>
           </Router>
         </ProvideAuth>

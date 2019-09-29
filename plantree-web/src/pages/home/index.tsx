@@ -42,7 +42,7 @@ export function HomePage(_props: unknown) {
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
       />
       <TestimonialsSection color="primary" size="medium" title="Team" subtitle="" />
-      <ClientsSection color="white" size="small" title="" subtitle="" />
+      <ClientsSection color="white" size="small" title="Partners" subtitle="" />
       <NewsletterSection
         color="primary"
         size="medium"

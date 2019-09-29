@@ -38,6 +38,13 @@
                 android:layout_below="@+id/person_name"
                 android:layout_toRightOf="@+id/person_photo" />
 
+            <TextView
+                android:id="@+id/person_spots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_age"
+                android:layout_toRightOf="@+id/person_photo" />
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

@@ -51,8 +51,7 @@ class FindTreehostFragment : Fragment() {
         viewManager = LinearLayoutManager(context)
 
         var persons = Person.initializeData()
-        viewAdapter =
-            TreeHostAdapter(persons)
+        viewAdapter = TreeHostAdapter(persons)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes

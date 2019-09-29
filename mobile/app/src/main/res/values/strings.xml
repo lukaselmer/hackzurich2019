@@ -12,6 +12,7 @@
     <string name="menu_findTreehost">Find planting locations</string>
     <string name="menu_upcoming_plantings">My upcoming plantings</string>
     <string name="menu_my_trees">My trees</string>
+    <string name="menu_findtreehost_detail">Detail</string>
     <string name="menu_share">Share Awareness</string>
     <string name="a11y_plant_item_image">image</string>
     <string name="google_maps_key">AIzaSyBI4LWE7CibpWAg-o6MqvyOn2Y59d93BCQ</string>

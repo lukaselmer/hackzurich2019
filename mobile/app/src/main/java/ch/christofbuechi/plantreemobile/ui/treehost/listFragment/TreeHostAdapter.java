@@ -1,8 +1,6 @@
 package ch.christofbuechi.plantreemobile.ui.treehost.listFragment;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -35,14 +34,28 @@ public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.Person
 
     @Override
     public void onBindViewHolder(@NonNull PersonViewHolder holder, final int position) {
-        holder.personName.setText(persons.get(position).name);
-        holder.personAge.setText(persons.get(position).age);
-        holder.personPhoto.setImageResource(persons.get(position).photoId);
+        final Person person = persons.get(position);
+        holder.personName.setText(person.name);
+        holder.personAge.setText(person.age);
+        holder.personPhoto.setImageResource(person.drawable);
+        holder.personSpots.setText(String.format("Free spots: %d", person.freespots));
+
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigate(v.getContext(), persons.get(position));
+
+                Bundle bundle = new Bundle();
+                bundle.putString("name", person.name);
+                bundle.putString("age", person.age);
+                bundle.putString("location", person.location);
+                bundle.putFloat("lng", (float) person.asLatLng().longitude);
+                bundle.putFloat("lat", (float) person.asLatLng().latitude);
+                bundle.putInt("freespots", person.freespots);
+
+                Navigation.findNavController(v).navigate(R.id.nav_findtreehost_detail, bundle);
+
             }
         });
     }
@@ -52,16 +65,10 @@ public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.Person
         return persons.size();
     }
 
-    private void navigate(Context context, Person item) {
-
-        Uri gmmIntentUri = Uri.parse("google.navigation:q="+item.location);
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
-        context.startActivity(mapIntent);
-    }
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
         final View iView;
+        TextView personSpots;
         TextView personName;
         TextView personAge;
         ImageView personPhoto;
@@ -72,6 +79,7 @@ public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.Person
             personName = (TextView) itemView.findViewById(R.id.person_name);
             personAge = (TextView) itemView.findViewById(R.id.person_age);
             personPhoto = (ImageView) itemView.findViewById(R.id.person_photo);
+            personSpots = (TextView) itemView.findViewById(R.id.person_spots);
         }
 
 

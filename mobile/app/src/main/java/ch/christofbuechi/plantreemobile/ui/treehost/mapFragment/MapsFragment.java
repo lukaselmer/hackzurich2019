@@ -67,6 +67,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
             map.addMarker(new MarkerOptions().position(person.asLatLng()).title(person.getTextForMarker()));
         }
 
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(47.389642, 8.516050),15), 1, null);
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(47.389642, 8.516050),18), 1, null);
     }
 }

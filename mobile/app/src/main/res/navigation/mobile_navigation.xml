@@ -23,8 +23,15 @@
         android:label="@string/menu_findTreehost"
         tools:layout="@layout/fragment_navigation" >
         <action
-            android:id="@+id/action_nav_findtreehost_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
+            android:id="@+id/action_nav_findtreehost_to_nav_findtreehost_detail"
+            app:destination="@id/nav_findtreehost_detail" >
+            <argument
+                android:name="name"
+                android:defaultValue="asd" />
+            <argument
+                android:name="age"
+                android:defaultValue="fgs" />
+        </action>
     </fragment>
 
     <fragment
@@ -38,6 +45,33 @@
         android:name="ch.christofbuechi.plantreemobile.ui.mytrees.MyTreesFragment"
         android:label="@string/menu_my_trees"
         tools:layout="@layout/fragment_mytrees" />
+
+    <fragment
+        android:id="@+id/nav_findtreehost_detail"
+        android:name="ch.christofbuechi.plantreemobile.ui.treehost.detailFragment.DetailFragment"
+        android:label="@string/menu_findtreehost_detail"
+        tools:layout="@layout/fragment_find_detail" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="lng"
+            app:argType="float" />
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="freespots"
+            app:argType="integer" />
+
+    </fragment>
+
 
     <fragment
         android:id="@+id/nav_share"

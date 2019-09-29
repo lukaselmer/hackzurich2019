@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/findtreehost_detail_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FreePlanting Spot Detail View"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/findtreehost_detail_age"
+        android:layout_width="match_parent"
+        android:layout_marginTop="108dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <TextView
+        android:id="@+id/findtreehost_detail_freespots"
+        android:layout_width="match_parent"
+        android:layout_marginTop="108dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <TextView
+        android:id="@+id/findtreehost_detail_location"
+        android:layout_width="match_parent"
+        android:layout_marginTop="108dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <fragment
+        android:id="@+id/findtreehost_detail_usermap"
+        android:name="com.google.android.libraries.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity" />
+
+
+</LinearLayout>

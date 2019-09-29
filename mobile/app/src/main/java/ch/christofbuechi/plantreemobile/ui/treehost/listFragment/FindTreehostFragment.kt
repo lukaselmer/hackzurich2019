@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.treehost
+package ch.christofbuechi.plantreemobile.ui.treehost.listFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.christofbuechi.plantreemobile.R
+import ch.christofbuechi.plantreemobile.ui.treehost.Person
 
 
 class FindTreehostFragment : Fragment() {
@@ -41,7 +42,8 @@ class FindTreehostFragment : Fragment() {
         viewManager = LinearLayoutManager(context)
 
         var persons = Person.initializeData()
-        viewAdapter = TreeHostAdapter(persons)
+        viewAdapter =
+            TreeHostAdapter(persons)
 
         recyclerView = root.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes

@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.treehost
+package ch.christofbuechi.plantreemobile.ui.treehost.listFragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

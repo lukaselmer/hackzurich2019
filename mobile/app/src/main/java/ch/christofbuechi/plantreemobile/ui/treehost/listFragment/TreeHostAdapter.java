@@ -1,4 +1,4 @@
-package ch.christofbuechi.plantreemobile.ui.treehost;
+package ch.christofbuechi.plantreemobile.ui.treehost.listFragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ch.christofbuechi.plantreemobile.R;
+import ch.christofbuechi.plantreemobile.ui.treehost.Person;
 
 public class TreeHostAdapter extends RecyclerView.Adapter<TreeHostAdapter.PersonViewHolder> {
 

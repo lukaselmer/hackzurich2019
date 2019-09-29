@@ -6,7 +6,7 @@ import { TestimonialsSection } from './../../components/TestimonialsSection';
 import { NewsletterSection } from './../../components/NewsletterSection';
 import { useRouter } from './../../util/router';
 import './styles.scss';
-import tree from '../../images/tree.png';
+import tree from '../../images/tree.svg';
 import { useAuth } from '../../util/auth';
 import { ContentSection } from '../../components/ContentSection';
 

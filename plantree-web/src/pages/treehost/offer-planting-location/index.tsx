@@ -54,7 +54,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
   //   numTrees: 10,
   //   trees: new Set(trees),
   //   dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
-  //   agreed: true
+  //   agreed: false
   // };
 
   render() {
@@ -317,8 +317,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
               <p>
                 <Checkbox
                   checked={this.state.agreed}
-                  onClick={() => this.setState({ agreed: !this.state.agreed })}
-                  onChange={() => true}
+                  onChange={() => this.setState({ agreed: !this.state.agreed })}
                 >
                   {' '}
                   I hereby confirm that I am authorized to allow planting trees as specified above in
@@ -358,7 +357,7 @@ export class OfferPlantingLocation extends Component<{}, S> {
 
   private storePlantingLocationButton() {
     return (
-      <FirestoreMutation path={firebasePaths.plantingLocations} type="add">
+      <FirestoreMutation key={`${this.state.agreed}`} path={firebasePaths.plantingLocations} type="add">
         {({ runMutation }) => (
           <Button
             isColor="primary"

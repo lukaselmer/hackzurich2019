@@ -40,22 +40,22 @@ const trees: Tree[] = [
 
 export class OfferPlantingLocation extends Component<{}, S> {
   searchBox: { getPlaces: () => void } = null as any;
-  // state: S = {
-  //   center: undefined,
-  //   treeLocation: undefined,
-  //   trees: new Set(),
-  //   numTrees: 0,
-  //   dates: { weekday: new Set(), time: new Set() },
-  //   agreed: false
-  // };
   state: S = {
-    center: { lat: 47.39015, lng: 8.515817 },
-    treeLocation: { lat: 47.39015, lng: 8.51617 },
-    numTrees: 10,
-    trees: new Set(trees),
-    dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
-    agreed: true
+    center: undefined,
+    treeLocation: undefined,
+    trees: new Set(),
+    numTrees: 0,
+    dates: { weekday: new Set(), time: new Set() },
+    agreed: false
   };
+  // state: S = {
+  //   center: { lat: 47.39015, lng: 8.515817 },
+  //   treeLocation: { lat: 47.39015, lng: 8.51617 },
+  //   numTrees: 10,
+  //   trees: new Set(trees),
+  //   dates: { weekday: new Set(weekdays), time: new Set(timesOfDay) },
+  //   agreed: true
+  // };
 
   render() {
     return (
@@ -317,7 +317,8 @@ export class OfferPlantingLocation extends Component<{}, S> {
               <p>
                 <Checkbox
                   checked={this.state.agreed}
-                  onChange={() => this.setState({ agreed: !this.state.agreed })}
+                  onClick={() => this.setState({ agreed: !this.state.agreed })}
+                  onChange={() => true}
                 >
                   {' '}
                   I hereby confirm that I am authorized to allow planting trees as specified above in

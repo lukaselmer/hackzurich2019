@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_account">
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="ch.christofbuechi.plantreemobile.ui.home.HomeFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_howto"
+        android:name="ch.christofbuechi.plantreemobile.ui.info.InfoFragment"
+        android:label="@string/menu_howto"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/nav_findtreehost"
+        android:name="ch.christofbuechi.plantreemobile.ui.treehost.NavigationFragment"
+        android:label="@string/menu_findTreehost"
+        tools:layout="@layout/fragment_navigation" >
+        <action
+            android:id="@+id/action_nav_findtreehost_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_upcoming_plantings"
+        android:name="ch.christofbuechi.plantreemobile.ui.upcomingplantings.UpcomingPlantingsFragment"
+        android:label="@string/menu_upcoming_plantings"
+        tools:layout="@layout/fragment_upcoming_plantings" />
+
+    <fragment
+        android:id="@+id/nav_my_trees"
+        android:name="ch.christofbuechi.plantreemobile.ui.mytrees.MyTreesFragment"
+        android:label="@string/menu_my_trees"
+        tools:layout="@layout/fragment_mytrees" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="ch.christofbuechi.plantreemobile.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="ch.christofbuechi.plantreemobile.ui.treehost.mapFragment.MapsFragment"
+        android:label="MapsFragment" />
+</navigation>

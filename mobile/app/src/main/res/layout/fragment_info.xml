@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to PlanTree"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/text_information"
+        android:layout_width="match_parent"
+        android:layout_marginTop="108dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:singleLine="false"
+        android:text="@string/bulletlist"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/info_title"
+        tools:layout_editor_absoluteX="16dp" />
+<!--        android:text="Thanks for interest. Let us show you how it works. The video below should cover your questions!"-->
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_information"
+        app:autoPlay="true"
+        app:showFullScreenButton="false"
+        app:videoId="G4H1N_yXBiA"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

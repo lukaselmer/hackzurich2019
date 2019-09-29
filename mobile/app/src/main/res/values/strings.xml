@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PlanTree</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">PlantTree</string>
+    <string name="nav_header_subtitle">Let\'s climate change</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_account">Account</string>
+    <string name="menu_howto">How to plant a tree?</string>
+    <string name="menu_findTreehost">Find planting locations</string>
+    <string name="menu_upcoming_plantings">My upcoming plantings</string>
+    <string name="menu_my_trees">My trees</string>
+    <string name="menu_share">Share Awareness</string>
+    <string name="a11y_plant_item_image">image</string>
+    <string name="google_maps_key">AIzaSyBI4LWE7CibpWAg-o6MqvyOn2Y59d93BCQ</string>
+    <string name="bulletlist">
+    <li>1) Register here</li>\n
+    <li>2) Find a planting location</li>\n
+    <li>3) Select a slot</li>\n
+    <li>4) Buy Seedlings </li>\n
+    <li>5) Go there and plant</li>\n
+    <li>6) See your plants in MyTrees section</li>\n
+    <li>7) Share your success</li>\n
+    </string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "942045837063",
+    "firebase_url": "https://plantreex.firebaseio.com",
+    "project_id": "plantreex",
+    "storage_bucket": "plantreex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942045837063:android:c6257d6bdc0945c9da37a2",
+        "android_client_info": {
+          "package_name": "ch.christofbuechi.plantreemobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942045837063-acmqagavrfsp80qph8tni4a3ibcml43s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD_7-WlpaxfTfwfs1_t_-8ty8S3huOUQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942045837063-acmqagavrfsp80qph8tni4a3ibcml43s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

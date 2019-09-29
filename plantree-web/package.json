@@ -18,6 +18,7 @@
     "analytics-plugin-ga": "^0.1.5",
     "bloomer": "^0.6.5",
     "bulma": "^0.7.5",
+    "date-fns": "^2.4.1",
     "firebase": "^7.0.0",
     "node-sass": "^4.12.0",
     "query-string": "^6.8.3",

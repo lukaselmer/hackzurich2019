@@ -26,22 +26,13 @@ import { Treehost } from '../treehost/treehost';
 import { LoadScript } from '@react-google-maps/api';
 import logo from '../../images/logo-horizontal.svg';
 import { FirestoreProvider } from '@react-firebase/firestore';
-import firebase from 'firebase';
-
-const config = {
-  apiKey: 'AIzaSyAohft0DdRVswDugjjMC03pE5XoftNz9Lc',
-  projectId: 'plantreex',
-  databaseURL: 'https://plantreex.firebaseio.com',
-  authDomain: 'plantreex.firebaseapp.com',
-  storageBucket: 'plantreex.appspot.com',
-  messagingSenderId: '942045837063',
-  appId: '1:942045837063:web:f13d5a05a2911415da37a2',
-  measurementId: 'G-EGHDWE7KTR'
-};
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import { firebaseConfig } from '../../util/firebase';
 
 export function App(_props: any) {
   return (
-    <FirestoreProvider {...config} firebase={firebase}>
+    <FirestoreProvider {...firebaseConfig} firebase={firebase}>
       <LoadScript
         id="script-loader"
         googleMapsApiKey="AIzaSyBI4LWE7CibpWAg-o6MqvyOn2Y59d93BCQ"

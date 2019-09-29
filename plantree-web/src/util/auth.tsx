@@ -2,14 +2,10 @@ import React, { useState, useEffect, useContext, createContext } from 'react';
 import queryString from 'query-string';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import { firebaseConfig } from './firebase';
 
 // Replace with your own Firebase credentials
-firebase.initializeApp({
-  apiKey: 'AIzaSyBkkFF0XhNZeWuDmOfEhsgdfX1VBG7WTas',
-  authDomain: 'divjoy-demo.firebaseapp.com',
-  projectId: 'divjoy-demo',
-  appID: 'divjoy-demo'
-});
+firebase.initializeApp(firebaseConfig);
 
 const authContext = createContext<ReturnType<typeof useProvideAuth>>(undefined as any);
 

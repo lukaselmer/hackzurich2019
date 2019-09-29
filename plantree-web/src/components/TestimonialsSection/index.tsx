@@ -40,7 +40,7 @@ export function TestimonialsSection(props: P) {
               name: 'Lukas Elmer',
               bio:
                 "I'm a software engineer and like participating in hackatons. I'm concerned about carbon emissions and want to find ways to neutralize them.",
-              company: 'Head of Innovation'
+              company: 'Head of CO2 Reduction'
             }
           ]}
         />

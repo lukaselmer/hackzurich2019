@@ -18,7 +18,7 @@ export function SignUpSection(props: P) {
 
   // Go to page after signup
   const onSignup = () => {
-    router.push('/dashboard');
+    router.push('/treehost');
   };
 
   return (

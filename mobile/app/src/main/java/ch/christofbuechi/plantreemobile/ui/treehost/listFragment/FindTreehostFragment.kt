@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ch.christofbuechi.plantreemobile.MainActivity
 import ch.christofbuechi.plantreemobile.R
 import ch.christofbuechi.plantreemobile.ui.treehost.Person
 
@@ -22,6 +23,19 @@ class FindTreehostFragment : Fragment() {
     private lateinit var viewAdapter: TreeHostAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
+
+    override fun onStart() {
+        val mainActivity = activity as MainActivity?
+        mainActivity!!.setFabVisibility(View.GONE)
+        super.onStart()
+    }
+
+    override fun onStop() {
+        val mainActivity = activity as MainActivity?
+        mainActivity!!.setFabVisibility(View.VISIBLE)
+        super.onStop()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,11 +47,6 @@ class FindTreehostFragment : Fragment() {
             ViewModelProviders.of(this).get(FindTreehostViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_find_treehost, container, false)
 
-
-        val textView: TextView = root.findViewById(R.id.text_findtreehost_title)
-        findTreehostViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
 
         viewManager = LinearLayoutManager(context)
 

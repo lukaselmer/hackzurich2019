@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 class UpcomingPlantingsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Your upcoming Plantings"
     }
     val text: LiveData<String> = _text
 }

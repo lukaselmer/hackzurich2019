@@ -34,9 +34,6 @@ class UpcomingPlantingsFragment : Fragment() {
 
 
         val textView: TextView = root.findViewById(R.id.text_upcoming_plantings_title)
-        upcomingPlantingViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
 
         viewManager = LinearLayoutManager(context)
 

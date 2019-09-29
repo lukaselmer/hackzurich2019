@@ -28,6 +28,20 @@ import ch.christofbuechi.plantreemobile.ui.treehost.Person;
 public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
 
+    @Override
+    public void onStart() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.GONE);
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.VISIBLE);
+        super.onStop();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

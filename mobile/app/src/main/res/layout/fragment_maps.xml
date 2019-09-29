@@ -26,7 +26,7 @@
         android:layout_margin="20dp"
         android:textAlignment="center"
         android:textSize="32sp"
-        android:text="Find planting locations"
+        android:text="@string/menu_findTreehost"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

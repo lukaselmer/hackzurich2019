@@ -23,20 +23,6 @@ public class NavigationFragment extends Fragment {
         // Required empty public constructor
     }
 
-    @Override
-    public void onStart() {
-        MainActivity mainActivity = (MainActivity) getActivity();
-        mainActivity.setFabVisibility(View.GONE);
-        super.onStart();
-    }
-
-    @Override
-    public void onStop() {
-        MainActivity mainActivity = (MainActivity) getActivity();
-        mainActivity.setFabVisibility(View.VISIBLE);
-        super.onStop();
-    }
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 

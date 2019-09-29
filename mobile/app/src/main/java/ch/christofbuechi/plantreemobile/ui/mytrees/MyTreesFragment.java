@@ -47,7 +47,6 @@ public class MyTreesFragment extends Fragment implements OnMapReadyCallback {
 
         View view = inflater.inflate(R.layout.fragment_mytrees, container, false);
         TextView textview = view.findViewById(R.id.text_mytrees);
-        textview.setText(viewmodel.getText().getValue());
 
 
         SupportMapFragment mMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);

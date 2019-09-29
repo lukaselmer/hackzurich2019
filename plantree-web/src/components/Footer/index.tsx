@@ -2,11 +2,11 @@ import React from 'react';
 import { Section } from './../Section';
 import { Link } from './../../util/router';
 import './styles.scss';
+import logo from '../../images/tree.svg';
 
 type P = {
   color: string;
   size: string | number;
-  logo?: string;
   copyright: string;
 };
 
@@ -15,9 +15,7 @@ export function Footer(props: P) {
     <Section color={props.color} size={props.size}>
       <div className="FooterComponent__container container">
         <div className="brand left">
-          <Link to="/">
-            <img src={props.logo} alt="Logo" />
-          </Link>
+          <img src={logo} alt="Logo" />
         </div>
         <div className="links right">
           <Link to="/about">About</Link>

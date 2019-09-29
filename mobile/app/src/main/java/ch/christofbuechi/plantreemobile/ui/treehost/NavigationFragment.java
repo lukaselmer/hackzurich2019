@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import ch.christofbuechi.plantreemobile.MainActivity;
 import ch.christofbuechi.plantreemobile.R;
 import ch.christofbuechi.plantreemobile.ui.treehost.listFragment.FindTreehostFragment;
 import ch.christofbuechi.plantreemobile.ui.treehost.mapFragment.MapsFragment;
@@ -20,6 +21,20 @@ public class NavigationFragment extends Fragment {
 
     public NavigationFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onStart() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.GONE);
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setFabVisibility(View.VISIBLE);
+        super.onStop();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

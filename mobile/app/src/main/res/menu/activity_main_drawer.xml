@@ -6,23 +6,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_sign_in_alt_solid"
             android:title="@string/menu_account" />
         <item
             android:id="@+id/nav_howto"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_photo_video_solid"
             android:title="@string/menu_howto" />
         <item
             android:id="@+id/nav_findtreehost"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_location_arrow_solid"
             android:title="@string/menu_findTreehost" />
         <item
             android:id="@+id/nav_upcoming_plantings"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_calendar_alt_regular"
             android:title="@string/menu_upcoming_plantings" />
         <item
             android:id="@+id/nav_my_trees"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_tree_solid"
             android:title="@string/menu_my_trees" />
     </group>
 

@@ -53,9 +53,13 @@ This project is about neutralizing CO2 emissions. It enables land owners to prov
 
 ## Demos
 
-### Creating a new planting location
+### Creating a new planting location (treehost)
 
 ![Creating a new planting location](https://github.com/lukaselmer/hackzurich2019/raw/master/docs/plantree-provide-location.gif)
+
+### Mobile demo (planter)
+
+![Planter](https://github.com/lukaselmer/hackzurich2019/raw/master/docs/plantree-mobile.gif)
 
 
 ## Web Application

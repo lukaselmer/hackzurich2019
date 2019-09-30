@@ -1,5 +1,7 @@
 # PLANTTree
 
+[![Final Pitch HackZurich 2019](https://img.youtube.com/vi/dRisx9DZOYg/0.jpg)](https://www.youtube.com/watch?v=dRisx9DZOYg)
+
 ## App
 
 * Web: https://plantreex.web.app/
